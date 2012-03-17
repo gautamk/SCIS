@@ -1,0 +1,32 @@
+2012-03-17 20:26:45 Error: [MissingActionException] Action FormsController::index() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(FormsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-03-17 20:27:34 Error: [MissingPluginException] Plugin Mongodb could not be found.
+#0 /usr/share/lib/php/Cake/Core/App.php(357): CakePlugin::path('Mongodb')
+#1 /usr/share/lib/php/Cake/Core/App.php(225): App::pluginPath('Mongodb')
+#2 /usr/share/lib/php/Cake/Core/App.php(535): App::path('Model/Datasourc...', 'Mongodb')
+#3 [internal function]: App::load('MongodbSource')
+#4 [internal function]: spl_autoload_call('MongodbSource')
+#5 /usr/share/lib/php/Cake/Model/ConnectionManager.php(173): class_exists('MongodbSource')
+#6 /usr/share/lib/php/Cake/Model/ConnectionManager.php(97): ConnectionManager::loadDataSource('mongodb')
+#7 /usr/share/lib/php/Cake/Model/Model.php(3354): ConnectionManager::getDataSource('mongodb')
+#8 /usr/share/lib/php/Cake/Model/Model.php(1085): Model->setDataSource('mongodb')
+#9 /usr/share/lib/php/Cake/Model/Model.php(3380): Model->setSource('forms')
+#10 /usr/share/lib/php/Cake/Model/Model.php(2635): Model->getDataSource()
+#11 /usr/share/lib/php/Cake/Model/Model.php(1491): Model->find('first', Array)
+#12 /home/archer/public_html/SCIS/dynForms/Controller/FormsController.php(20): Model->read(NULL, '4f64a61d6332949...')
+#13 [internal function]: FormsController->getForm('4f64a61d6332949...')
+#14 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(FormsController), Array)
+#15 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#16 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(FormsController), Object(CakeRequest), Object(CakeResponse))
+#17 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#18 {main}
+2012-03-17 20:28:03 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Forms/getform.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(FormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
