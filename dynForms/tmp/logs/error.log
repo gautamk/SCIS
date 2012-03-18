@@ -30,3 +30,9 @@
 #3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(FormsController), Object(CakeRequest), Object(CakeResponse))
 #4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2012-03-18 05:54:25 Error: [MissingControllerException] Controller class RegistrationsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-18 05:55:47 Error: [MissingControllerException] Controller class RegistrationsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
