@@ -28,11 +28,14 @@ class DynamicForm extends AppModel {
      * @param type $id 
      * @return boolean if form is not valid
      * @return mixed if form is valid (the form data from the database).
-     */
+     */ 
     public function isValidForm($id) {
         if(is_null($id) == true){
             return false;
         }
+        /**
+         *@var Mongodb Curso 
+         */
         $results = $this->read(null,$id);
         if ($results==null){
             return false;

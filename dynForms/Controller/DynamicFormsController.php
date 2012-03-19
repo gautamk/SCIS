@@ -11,7 +11,9 @@
  * @author gautam
  */
 class DynamicFormsController extends AppController {
-
+    
+    public $helpers=array('Form','Html');
+    
     public function _csrf_error() {
         $this->flash("csrf Error", array("controller" => "Pages", "action" => "display"));
     }
@@ -34,6 +36,41 @@ class DynamicFormsController extends AppController {
     public function index() {
         
     }
+    
+    /**
+     * Check if valid and retrieve a dynamic form
+     * from the database
+     * @name
+     * @param type $id 
+     */
+    public function getForm($id){
+        $result = $this->DynamicForm->isValidForm($id);
+        if($result == false){
+            $this->flash("Invalid form", $this->referer(
+                    array('controller'=>"pages", 'action' => 'index')
+                    ));
+            return;
+        }
+        /**
+         *@var Dynamic form configuration obtained from Mongodb
+         */
+        
+        $this->set("dynamicForm",$result["DynamicForm"]);
+        $this->render('get_form');
+    }
+   
+    /**
+     *  Alias action for getForm
+     *  Use for convienience 
+     * @see getForm
+     * @param type $id 
+     */
+    public function gf($id) {
+         //$this->redirect(array('action' => 'getForm',$id));
+         $this->getForm($id);
+         return;
+    }
+    
 
 }
 

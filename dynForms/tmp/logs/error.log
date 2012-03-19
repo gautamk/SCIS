@@ -66,3 +66,146 @@
 #3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
 #4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2012-03-19 20:42:04 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/index.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:42:33 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/gf.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:46:54 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/gf.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:47:37 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/gf.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:47:52 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/gf.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:47:57 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/get_form.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:48:38 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/gf.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:50:41 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/getform.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:50:55 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/getform.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:51:18 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/getform.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-03-19 20:51:28 Error: [MissingActionException] Action DynamicFormsController::get_form() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-03-19 20:53:24 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Pages/as.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('as')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render('as', NULL)
+#2 /home/archer/public_html/SCIS/dynForms/Controller/PagesController.php(71): Controller->render('as')
+#3 [internal function]: PagesController->display('as')
+#4 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-03-19 20:53:33 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Pages/index.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('index')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render('index', NULL)
+#2 /home/archer/public_html/SCIS/dynForms/Controller/PagesController.php(71): Controller->render('index')
+#3 [internal function]: PagesController->display('index')
+#4 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-03-19 20:53:37 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Pages/display.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('display')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render('display', NULL)
+#2 /home/archer/public_html/SCIS/dynForms/Controller/PagesController.php(71): Controller->render('display')
+#3 [internal function]: PagesController->display('display')
+#4 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-03-19 20:55:06 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/DynamicForms/get_form.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('DynamicForms/ge...')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render('DynamicForms/ge...', NULL)
+#2 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(56): Controller->render('DynamicForms/ge...')
+#3 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(62): DynamicFormsController->getForm('4f6686b8633294a...')
+#4 [internal function]: DynamicFormsController->gf('4f6686b8633294a...')
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(DynamicFormsController), Array)
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-03-19 20:55:23 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/DynamicForms/get_form.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('DynamicForms/ge...')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render('DynamicForms/ge...', NULL)
+#2 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(56): Controller->render('DynamicForms/ge...')
+#3 [internal function]: DynamicFormsController->getForm('4f6686b8633294a...')
+#4 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(DynamicFormsController), Array)
+#5 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#7 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2012-03-19 20:57:08 Error: [MissingActionException] Action DynamicFormsController::thanks() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-03-19 20:57:18 Error: [MissingActionException] Action DynamicFormsController::thanks() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-03-19 21:12:51 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/gf.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(962): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
