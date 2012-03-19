@@ -43,7 +43,7 @@ class DynamicFormsController extends AppController {
      * @name
      * @param type $id 
      */
-    public function getForm($id){
+    public function getForm($id=null){
         $result = $this->DynamicForm->isValidForm($id);
         if($result == false){
             $this->flash("Invalid form", $this->referer(
@@ -54,7 +54,7 @@ class DynamicFormsController extends AppController {
         /**
          *@var Dynamic form configuration obtained from Mongodb
          */
-        
+        $result["DynamicForm"]["options"]["url"]=array("controller"=>"dynamicforms","action"=>"formresponse");
         $this->set("dynamicForm",$result["DynamicForm"]);
         $this->render('get_form');
     }
@@ -65,12 +65,20 @@ class DynamicFormsController extends AppController {
      * @see getForm
      * @param type $id 
      */
-    public function gf($id) {
+    public function gf($id=null) {
          //$this->redirect(array('action' => 'getForm',$id));
          $this->getForm($id);
          return;
     }
     
+    
+    /**
+     *
+     * @param type $id 
+     */    
+    public function formResponse($id) {
+        
+    }
 
 }
 

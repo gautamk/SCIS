@@ -209,3 +209,24 @@
 #3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
 #4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2012-03-19 21:52:55 Error: [MissingControllerException] Controller class DynamicformsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-19 21:57:41 Error: [MissingControllerException] Controller class DynamicformsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-19 21:57:45 Error: [MissingControllerException] Controller class DynamicformsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-19 22:53:21 Error: [MissingControllerException] Controller class DynamicformsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-19 22:53:29 Error: [MissingControllerException] Controller class GetformController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-19 22:53:37 Error: [MissingControllerException] Controller class GetFormController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-03-19 22:53:47 Error: [MissingControllerException] Controller class DynamicformsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
