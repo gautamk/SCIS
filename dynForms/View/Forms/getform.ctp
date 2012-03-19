@@ -1,5 +1,6 @@
 <?php
 
+
 echo $this->Form->create($form["Form"]["name"],$form["Form"]["options"]);
 echo $this->Form->hidden("form_id",array("value"=>$form["Form"]["_id"]));
 foreach ($form["Form"]["inputs"] as $input => $options) {
