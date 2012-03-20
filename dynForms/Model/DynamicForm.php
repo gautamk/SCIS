@@ -34,7 +34,7 @@ class DynamicForm extends AppModel {
             return false;
         }
         /**
-         *@var Mongodb Curso 
+         *@var Mongodb Cursor 
          */
         $results = $this->read(null,$id);
         if ($results==null){

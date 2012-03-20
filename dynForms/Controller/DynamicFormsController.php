@@ -15,7 +15,9 @@ class DynamicFormsController extends AppController {
     public $helpers=array('Form','Html');
     
     public function _csrf_error() {
-        $this->flash("csrf Error", array("controller" => "Pages", "action" => "display"));
+        $this->flash("csrf Error",  $this->referer(
+                array('controller'=>"pages", 'action' => 'display')
+                    ));
     }
 
     public function blackhole($type) {
@@ -47,14 +49,14 @@ class DynamicFormsController extends AppController {
         $result = $this->DynamicForm->isValidForm($id);
         if($result == false){
             $this->flash("Invalid form", $this->referer(
-                    array('controller'=>"pages", 'action' => 'index')
+                    array('controller'=>"pages", 'action' => 'display')
                     ));
             return;
         }
         /**
          *@var Dynamic form configuration obtained from Mongodb
          */
-        $result["DynamicForm"]["options"]["url"]=array("controller"=>"dynamicforms","action"=>"formresponse");
+        $result["DynamicForm"]["options"]["url"]=array("controller"=>"dynamicForms","action"=>"formresponse",$id);
         $this->set("dynamicForm",$result["DynamicForm"]);
         $this->render('get_form');
     }
@@ -77,6 +79,39 @@ class DynamicFormsController extends AppController {
      * @param type $id 
      */    
     public function formResponse($id) {
+        
+        /**
+         * @todo Implement via Security Component
+         *  Prevent access via HTTP GET method 
+         */
+        if($this->request->is('GET')== true){
+            $this->flash("This page is not to be directly opened", 
+                   $this->referer(array('controller'=>"pages", 'action' => 'display')) );
+        }
+        
+        debug($this->data);
+        
+        /**
+         *  Check if form submit location and form _id are the same
+         *  check if $id and _id are the same. 
+         *  @todo check if this is really necessary
+         */
+        //debug(strcmp($this->data['DynamicFormResponse']['_id'], $id));
+        strcmp($this->data['DynamicFormResponse']['_id'], $id) == 0?
+                true : $this->flash("Form ID and Submit ID do not match", 
+                        $this->referer(array( 'controller'=>"pages", 
+                            'action' => 'display') ) );
+        /**
+         *Check form validity 
+         */
+        $result = $this->DynamicForm->isValidForm($id);
+        if($result == false ){
+            $this->flash("Invalid form", $this->referer(
+                    array('controller'=>"pages", 'action' => 'display')
+                    ));
+            return;
+        }
+        
         
     }
 
