@@ -1,3 +1,9 @@
+<h1>
+    <?php echo $dynamicForm['title']; ?>
+</h1>
+<article>
+    <?php echo $dynamicForm['description']; ?>
+</article>
 <?php
 echo $this->Form->create(
         $dynamicForm["model"],

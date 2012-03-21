@@ -502,3 +502,11 @@
 #11 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
 #12 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2012-03-21 22:39:14 Error: [NotFoundException] Form not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(100): DynamicFormsController->getForm('4f6a0a91633294a...')
+#1 [internal function]: DynamicFormsController->gf('4f6a0a91633294a...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(DynamicFormsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
