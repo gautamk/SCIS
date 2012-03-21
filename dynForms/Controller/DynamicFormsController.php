@@ -14,11 +14,19 @@ class DynamicFormsController extends AppController {
     
     public $helpers=array('Form','Html');
     
+    /**
+     * Contains the form schema retrieved from the database
+     * 
+     * @var array 
+     */
+    private $form_schema = null;
     public function _csrf_error() {
         $this->flash("csrf Error",  $this->referer(
                 array('controller'=>"pages", 'action' => 'display')
                     ));
     }
+    
+
 
     public function blackhole($type) {
         switch ($type) {
@@ -33,11 +41,13 @@ class DynamicFormsController extends AppController {
 
     public function beforeFilter() {
         $this->Security->blackHoleCallback = 'blackhole';
+        $this->loadModel('DynamicFormResponse');
     }
 
     public function index() {
         
     }
+    
     
     /**
      * Check if valid and retrieve a dynamic form
@@ -46,18 +56,38 @@ class DynamicFormsController extends AppController {
      * @param type $id 
      */
     public function getForm($id=null){
-        $result = $this->DynamicForm->isValidForm($id);
-        if($result == false){
+        /**
+         *  Check if form exists 
+         */
+        $this->form_schema= $this->DynamicForm->isValidForm($id);
+        
+        if($this->form_schema == false){
             $this->flash("Invalid form", $this->referer(
                     array('controller'=>"pages", 'action' => 'display')
                     ));
             return;
+            
         }
+        
+        $this->form_schema["DynamicForm"]["model"]="DynamicFormResponse";
+        $this->DynamicFormResponse->validate = $this->form_schema['DynamicForm']["validation"];
+        
         /**
-         *@var Dynamic form configuration obtained from Mongodb
+         * Process Form submission 
          */
-        $result["DynamicForm"]["options"]["url"]=array("controller"=>"dynamicForms","action"=>"formresponse",$id);
-        $this->set("dynamicForm",$result["DynamicForm"]);
+        if($this->request->is("POST")==true){
+            /**
+             * Data Validation 
+             */
+            if($this->DynamicFormResponse->save($this->request->data) == true ){
+                $this->flash("Validation success",$this->referer(
+                    array('controller'=>"pages", 'action' => 'display')
+                    ));
+                return;
+            }
+        }        
+        
+        $this->set("dynamicForm",$this->form_schema["DynamicForm"]);
         $this->render('get_form');
     }
    
@@ -72,48 +102,6 @@ class DynamicFormsController extends AppController {
          $this->getForm($id);
          return;
     }
-    
-    
-    /**
-     *
-     * @param type $id 
-     */    
-    public function formResponse($id) {
-        
-        /**
-         * @todo Implement via Security Component
-         *  Prevent access via HTTP GET method 
-         */
-        if($this->request->is('GET')== true){
-            $this->flash("This page is not to be directly opened", 
-                   $this->referer(array('controller'=>"pages", 'action' => 'display')) );
-        }
-        
-        debug($this->data);
-        
-        /**
-         *  Check if form submit location and form _id are the same
-         *  check if $id and _id are the same. 
-         *  @todo check if this is really necessary
-         */
-        //debug(strcmp($this->data['DynamicFormResponse']['_id'], $id));
-        strcmp($this->data['DynamicFormResponse']['_id'], $id) == 0?
-                true : $this->flash("Form ID and Submit ID do not match", 
-                        $this->referer(array( 'controller'=>"pages", 
-                            'action' => 'display') ) );
-        /**
-         *Check form validity 
-         */
-        $result = $this->DynamicForm->isValidForm($id);
-        if($result == false ){
-            $this->flash("Invalid form", $this->referer(
-                    array('controller'=>"pages", 'action' => 'display')
-                    ));
-            return;
-        }
-        
-        
-    }
-
 }
-
+    
+   

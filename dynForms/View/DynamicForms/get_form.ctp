@@ -3,7 +3,7 @@ echo $this->Form->create(
         $dynamicForm["model"],
         $dynamicForm["options"]
         );
-echo $this->Form->hidden("_id",array(
+echo $this->Form->hidden("dynamicForm_id",array(
     "value"=>$dynamicForm["_id"]
 ));
 foreach ($dynamicForm["inputs"] as $input => $options) {

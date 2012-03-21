@@ -3,7 +3,7 @@
 
 class DynamicFormResponse extends AppModel{
     public $useDbConfig = 'mongodb';  
-    public $useTable = 'dynamicForms';
+    public $useTable = 'dynamicFormsResponse';
     public $primaryKey = '_id';
     public $validate=array();
     
