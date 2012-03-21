@@ -20,11 +20,9 @@ class DynamicFormsController extends AppController {
      * @var array 
      */
     private $form_schema = null;
-    public function _csrf_error() {
-        $this->flash("csrf Error",  $this->referer(
-                array('controller'=>"pages", 'action' => 'display')
-                    ));
-    }
+    private function _csrf_error() {
+        throw new BadRequestException("CSRF Error");
+        }
     
 
 
@@ -41,7 +39,7 @@ class DynamicFormsController extends AppController {
 
     public function beforeFilter() {
         $this->Security->blackHoleCallback = 'blackhole';
-        $this->loadModel('DynamicFormResponse');
+        
     }
 
     public function index() {
@@ -56,20 +54,21 @@ class DynamicFormsController extends AppController {
      * @param type $id 
      */
     public function getForm($id=null){
+        $this->loadModel('DynamicFormResponse');
         /**
          *  Check if form exists 
          */
         $this->form_schema= $this->DynamicForm->isValidForm($id);
-        
         if($this->form_schema == false){
-            $this->flash("Invalid form", $this->referer(
-                    array('controller'=>"pages", 'action' => 'display')
-                    ));
-            return;
-            
+            throw new NotFoundException("Form not found");
         }
-        
+        /**
+         * Associate form with Model 
+         */
         $this->form_schema["DynamicForm"]["model"]="DynamicFormResponse";
+        /**
+         * Set validation schema 
+         */
         $this->DynamicFormResponse->validate = $this->form_schema['DynamicForm']["validation"];
         
         /**
@@ -80,9 +79,8 @@ class DynamicFormsController extends AppController {
              * Data Validation 
              */
             if($this->DynamicFormResponse->save($this->request->data) == true ){
-                $this->flash("Validation success",$this->referer(
-                    array('controller'=>"pages", 'action' => 'display')
-                    ));
+                $this->set("ticket_id",  $this->DynamicFormResponse->id);
+                $this->render('ticket_successfully_saved');
                 return;
             }
         }        
