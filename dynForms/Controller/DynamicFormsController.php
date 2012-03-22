@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of DynamicFormsController
  *
@@ -96,9 +91,7 @@ class DynamicFormsController extends AppController {
      * @param type $id 
      */
     public function gf($id=null) {
-         //$this->redirect(array('action' => 'getForm',$id));
          $this->getForm($id);
-         return;
     }
 }
     
