@@ -563,3 +563,18 @@
 #4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
 #5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2012-03-23 07:30:40 Error: [BadRequestException] CSRF Error
+#0 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(27): DynamicFormsController->_csrf_error()
+#1 [internal function]: DynamicFormsController->blackhole('csrf')
+#2 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(590): call_user_func_array(Array, Array)
+#3 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(314): SecurityComponent->_callback(Object(DynamicFormsController), 'blackhole', Array)
+#4 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(227): SecurityComponent->blackHole(Object(DynamicFormsController), 'csrf')
+#5 [internal function]: SecurityComponent->startup(Object(DynamicFormsController))
+#6 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#9 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#11 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
