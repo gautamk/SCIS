@@ -1,9 +1,3 @@
-<h1>
-    <?php echo $dynamicForm['title']; ?>
-</h1>
-<article>
-    <?php echo $dynamicForm['description']; ?>
-</article>
 <?php
 echo $this->Form->create(
         $dynamicForm["model"],
@@ -20,4 +14,5 @@ echo $this->Form->submit($dynamicForm['submit']);
 echo $this->Form->end();
 
 debug($dynamicForm);
+debug(env('HTTP_USER_AGENT'));
 ?>

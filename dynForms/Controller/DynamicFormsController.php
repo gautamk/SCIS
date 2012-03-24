@@ -36,7 +36,10 @@ class DynamicFormsController extends AppController {
         $this->Security->blackHoleCallback = 'blackhole';
         
     }
-
+	
+	/**
+	 * Index Page
+	 */
     public function index() {
         
     }
@@ -70,7 +73,15 @@ class DynamicFormsController extends AppController {
          * Process Form submission 
          */
         if($this->request->is("POST")==true){
-            /**
+            
+			/**
+			 * Set defaults values
+			 */
+			foreach ($this->DynamicFormResponse->getDefaults() as $fieldName => $defaultValue) {
+					if (empty($this-> request-> data[$this-> DynamicFormResponse -> alias][$fieldName]))
+						 $this->request->data[$this-> DynamicFormResponse -> alias][$fieldName] = $defaultValue;
+			}
+			/**
              * Data Validation 
              */
             if($this->DynamicFormResponse->save($this->request->data) == true ){
