@@ -1,3 +1,6 @@
 [submodule "dynForms/Plugin/Mongodb"]
 	path = dynForms/Plugin/Mongodb
 	url = git://github.com/ichikaway/cakephp-mongodb.git
+[submodule "dynForms/Plugin/DebugKit"]
+	path = dynForms/Plugin/DebugKit
+	url = git://github.com/cakephp/debug_kit.git
