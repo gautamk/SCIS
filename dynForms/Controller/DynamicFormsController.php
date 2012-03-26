@@ -70,22 +70,20 @@ class DynamicFormsController extends AppController {
 		 * Process Form submission
 		 */
 		if ($this -> request -> is("POST") == true) {
-
+			
 			/**
 			 * Set defaults values
 			 */
+			/*
 			foreach ($this->DynamicFormResponse->getDefaults() as $fieldName => $defaultValue) {
-				if (empty($this -> request -> data[$this -> DynamicFormResponse -> alias][$fieldName]))
-					$this -> request -> data[$this -> DynamicFormResponse -> alias][$fieldName] = $defaultValue;
-			}
+							if (empty($this -> request -> data[$this -> DynamicFormResponse -> alias][$fieldName]))
+								$this -> request -> data[$this -> DynamicFormResponse -> alias][$fieldName] = $defaultValue;
+						}*/
+			
 			/**
 			 * Data Validation
 			 */
-			try{
-				$saveResult = $this -> DynamicFormResponse -> save($this -> request -> data);	
-			}catch(MongoException $e){
-				debug($e);
-			}
+			$saveResult = $this -> DynamicFormResponse -> save($this -> request -> data);	
 			if ($saveResult == true) {
 				$this -> set("ticket_id", $this -> DynamicFormResponse -> id);
 				$this -> render('ticket_successfully_saved');

@@ -5,7 +5,8 @@ class DynamicFormResponse extends AppModel {
 	public $useTable = 'dynamicFormResponse';
 	public $primaryKey = '_id';
 	public $validate = array();
-
+	public $actsAs=array('Mongodb.Schemaless');
+	
 	public function getDefaults(){
 		$defaultValues=array(
 			"escalation"=>0,
@@ -34,7 +35,38 @@ END;
 		$defaultValues["browser"]["browser_name_regex"] = preg_replace($regex, '$1', $defaultValues["browser"]["browser_name_regex"]);
 		return $defaultValues;
 	}
-
+	
+	
+	
+	/**
+	 * Extends beforeSave() to add default values
+	 *
+	 * @param array $options
+	 * @return bool
+	 */
+	public function beforeSave($options = array()) {
+	    // Add default values if not set already
+	    foreach ($this->getDefaults() as $fieldName => $defaultValue) {
+	        if (empty($this->data[$this->alias][$fieldName])){
+	        	//$this->data[$this->alias][$fieldName] = $defaultValue;
+	        	$this->set($fieldName,$defaultValue);
+	        }
+	        	
+	    }
+		$this->set($this->data);
+		debug($this->data);
+		debug($options);
+	    return parent::beforeSave($options);
+	}
+	
+	public function save($data = null, $validate = true, $fieldList = array()){
+		debug($data);
+		debug($validate);
+		debug($fieldList);
+		return parent::save( $data ,  $validate ,  $fieldList);
+	}
+	
+	
 	public function setSchema($schema) {
 		$this -> _schema = $schema;
 	}
