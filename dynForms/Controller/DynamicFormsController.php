@@ -74,11 +74,11 @@ class DynamicFormsController extends AppController {
 			/**
 			 * Set defaults values
 			 */
-			/*
+			
 			foreach ($this->DynamicFormResponse->getDefaults() as $fieldName => $defaultValue) {
 							if (empty($this -> request -> data[$this -> DynamicFormResponse -> alias][$fieldName]))
 								$this -> request -> data[$this -> DynamicFormResponse -> alias][$fieldName] = $defaultValue;
-						}*/
+			}
 			
 			/**
 			 * Data Validation

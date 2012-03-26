@@ -53,19 +53,21 @@ END;
 	        }
 	        	
 	    }
+		
+
 		$this->set($this->data);
 		debug($this->data);
 		debug($options);
 	    return parent::beforeSave($options);
 	}
-	
+	/*
 	public function save($data = null, $validate = true, $fieldList = array()){
 		debug($data);
 		debug($validate);
 		debug($fieldList);
 		return parent::save( $data ,  $validate ,  $fieldList);
 	}
-	
+	*/
 	
 	public function setSchema($schema) {
 		$this -> _schema = $schema;

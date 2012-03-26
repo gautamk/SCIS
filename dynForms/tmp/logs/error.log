@@ -697,3 +697,34 @@
 #10 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
 #11 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2012-03-26 06:04:03 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/DynamicForms/index.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /home/archer/public_html/SCIS/dynForms/Plugin/DebugKit/View/DebugView.php(82): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(962): DebugView->render(NULL, NULL)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-03-26 06:04:11 Error: [NotFoundException] Form not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(109): DynamicFormsController->getForm(NULL)
+#1 [internal function]: DynamicFormsController->gf()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(DynamicFormsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-03-26 06:20:12 Error: [BadRequestException] CSRF Error
+#0 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(25): DynamicFormsController->_csrf_error()
+#1 [internal function]: DynamicFormsController->blackhole('csrf')
+#2 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(590): call_user_func_array(Array, Array)
+#3 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(314): SecurityComponent->_callback(Object(DynamicFormsController), 'blackhole', Array)
+#4 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(227): SecurityComponent->blackHole(Object(DynamicFormsController), 'csrf')
+#5 [internal function]: SecurityComponent->startup(Object(DynamicFormsController))
+#6 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#7 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#8 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#9 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#10 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#11 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#12 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
