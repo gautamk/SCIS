@@ -295,10 +295,13 @@
  * If running via cli - apc is disabled by default. ensure it's available and enabled in this case
  *
  */
-$engine = 'File';
+$engine = 'Memcache';
+/*
 if (extension_loaded('apc') && function_exists('apc_dec') && (php_sapi_name() !== 'cli' || ini_get('apc.enable_cli'))) {
 	$engine = 'Apc';
 }
+*/
+
 
 // In development mode, caches should expire quickly.
 $duration = '+999 days';
@@ -307,7 +310,7 @@ if (Configure::read('debug') >= 1) {
 }
 
 // Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
-$prefix = 'myapp_';
+$prefix = 'scis_';
 
 /**
  * Configure the cache used for general framework caching.  Path information,
