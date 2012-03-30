@@ -37,7 +37,18 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link(__('CakePHP: the rapid development php framework'), 'http://cakephp.org'); ?></h1>
+			<h1>
+				<?php 
+				if( AuthComponent::user('_id') || AuthComponent::user('id')  ){
+					echo AuthComponent::user('email');
+					echo $this->Html->link("logout", array(
+					                       "controller" => "Users",
+					                       "action" =>"logout"
+					                       )); 
+				}
+				?>
+
+			</h1>
 		</div>
 		<div id="content">
 

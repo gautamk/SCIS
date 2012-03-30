@@ -733,3 +733,19 @@
 #1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2012-03-30 20:59:48 Error: [MissingActionException] Action FormsController::index() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(FormsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-03-30 21:03:59 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(227): SecurityComponent->blackHole(Object(UsersController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(UsersController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

@@ -173,7 +173,8 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
+		'defaults' => 'cache',
+		'cookie'=>'SCIS'
 	));
 
 /**
@@ -327,11 +328,22 @@ Cache::config('_cake_core_', array(
 /**
  * Configure the cache for model and datasource caches.  This cache configuration
  * is used to store schema descriptions, and table listings in connections.
+ * debug_kit
  */
 Cache::config('_cake_model_', array(
 	'engine' => $engine,
 	'prefix' => $prefix . 'cake_model_',
 	'path' => CACHE . 'models' . DS,
+	'serialize' => ($engine === 'File'),
+	'duration' => $duration
+));
+/**
+ * Configure Debug kit to use Memcache instead of File cache
+ */
+Cache::config('debug_kit', array(
+	'engine' => $engine,
+	'prefix' => $prefix . 'debug_kit',
+	'path' => CACHE . 'debug_kit' . DS,
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
