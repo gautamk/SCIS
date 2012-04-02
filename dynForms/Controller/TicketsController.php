@@ -17,9 +17,12 @@ class TicketsController extends AppController {
 	 * List all available tickets 
 	 */
     public function index() {
-    	$this->loadModel('DynamicFormResponse');
+
+    }
+	public function getTickets(){
+		$this->loadModel('DynamicFormResponse');
 		$tickets = $this->DynamicFormResponse->find('all');
 		$this->set('tickets',$tickets);
-    }
+	}
 
 } // END
