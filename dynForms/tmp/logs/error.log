@@ -798,3 +798,15 @@
 #4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
 #5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2012-04-02 11:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-02 11:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-02 11:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-02 11:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

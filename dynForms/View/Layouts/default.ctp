@@ -65,6 +65,51 @@
 			?>
 		</div>
 	</div>
-	<?php //echo $this->element('sql_dump'); ?>
+	
+<?php
+/**
+ * Add developement version of scripts
+ * or Production version based on debug level
+ */
+if(Configure::read('debug') > 0){
+	echo $this->Html->script('jquery-1.7.2');
+	echo $this->Html->script('bootstrap');
+	echo $this->Html->script('underscore');
+	echo $this->Html->script('backbone');
+}else{
+	echo $this->Html->script('jquery-1.7.2.min');
+	echo $this->Html->script('bootstrap.min');
+	echo $this->Html->script('underscore-min');
+	echo $this->Html->script('backbone-min');
+}
+// Add this to any `view` recommended is View/Layouts/default.ctp
+
+/*
+    	WWW_ROOT generally refers to your webroot directory
+    	DS is usually '/'
+    	$this->params['controller'] returns controller name in lowercase 
+    	$this->params['action'] returns action name in lowercase 
+    	Refer 
+    		* http://book.cakephp.org/2.0/en/core-libraries/global-constants-and-functions.html
+    		* http://stackoverflow.com/a/1425219
+*/
+
+if (is_file( WWW_ROOT . 'js' . DS . $this->params['controller'] . DS . $this->params['action'] . '.js')) {
+        echo $this->Html->script($this->params['controller'].DS.$this->params['action']);
+}
+
+if (is_file(WWW_ROOT . 'css' . DS . $this->params['controller'] . DS . $this->params['action'] . '.css')) {
+        echo $this->Html->css($this->params['controller'].DS.$this->params['action']);
+}
+
+/*
+		Where to place JS and CSS files
+		APP_DIR/webroot/js/<lowercase_controller_name>/<lowercase_action_name>.js
+		APP_DIR/webroot/css/<lowercase_controller_name>/<lowercase_action_name>.css
+
+		Example
+		APP_DIR/webroot/js/pages/index.js
+		APP_DIR/webroot/css/pages/index.css
+*/ ?>
 </body>
 </html>
