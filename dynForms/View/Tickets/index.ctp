@@ -1,4 +1,11 @@
+<script type="text/template" id="TicketTemplate">
 
-<table>
+		<td><%= DynamicFormResponse._id %></td>
+		<td><%= DynamicFormResponse.email  %></td>
+		<td><%= DynamicFormResponse.brief_description %></td>
 
-</table>
+</script>
+<button class="RefreshButton">Refresh</button>
+<div id="TicketContainer">
+	
+</div>
