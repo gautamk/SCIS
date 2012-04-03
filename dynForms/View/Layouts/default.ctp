@@ -40,11 +40,20 @@
 			echo $this->Html->script('bootstrap');
 			echo $this->Html->script('underscore');
 			echo $this->Html->script('backbone');
+			
+			echo $this->Html->css('cake.generic');
+
+			echo $this->Html->css('bootstrap');
+			echo $this->Html->css('bootstrap-responsive');
+
 		}else{
 			echo $this->Html->script('jquery-1.7.2.min');
 			echo $this->Html->script('bootstrap.min');
 			echo $this->Html->script('underscore-min');
 			echo $this->Html->script('backbone-min');
+
+			echo $this->Html->css('bootstrap.min');
+			echo $this->Html->css('bootstrap-responsive.min');
 		}
 		// Add this to any `view` recommended is View/Layouts/default.ctp
 		
@@ -62,18 +71,18 @@
 		        echo $this->Html->script($this->params['controller'].DS.$this->params['action']);
 		}
 		
-		if (is_file(WWW_ROOT . 'css' . DS . $this->params['controller'] . DS . $this->params['action'] . '.css')) {
+		if (is_file(WWW_ROOT . 'css' . DS . $this->params['controller'] . DS . $this->params['action'] . '->css')) {
 		        echo $this->Html->css($this->params['controller'].DS.$this->params['action']);
 		}
 		
 		/*
 				Where to place JS and CSS files
 				APP_DIR/webroot/js/<lowercase_controller_name>/<lowercase_action_name>.js
-				APP_DIR/webroot/css/<lowercase_controller_name>/<lowercase_action_name>.css
+				APP_DIR/webroot/css/<lowercase_controller_name>/<lowercase_action_name>->css
 		
 				Example
 				APP_DIR/webroot/js/pages/index.js
-				APP_DIR/webroot/css/pages/index.css
+				APP_DIR/webroot/css/pages/index->css
 		*/ 
 ?>
 </head>
@@ -87,7 +96,7 @@
 					echo $this->Html->link("logout", array(
 					                       "controller" => "Users",
 					                       "action" =>"logout"
-					                       )); 
+					                       ),array("class"=>'btn')); 
 				}
 				?>
 

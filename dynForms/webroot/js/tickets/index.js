@@ -4,7 +4,7 @@
 
   window.TicketView = Backbone.View.extend({
     tagName: 'tr',
-    templateSelector: "#TicketTemplate",
+    templateSelector: "#TicketIndexTemplate",
     initialize: function() {
       _.bindAll(this, "render");
       this.template = _.template($(this.templateSelector).html());
@@ -20,12 +20,13 @@
 
   window.TicketCollection = Backbone.Collection.extend({
     model: window.Ticket,
-    url: "getTickets.json"
+    url: window.location.pathname + ".json"
   });
 
   window.TicketCollectionView = Backbone.View.extend({
     tagName: "table",
     id: "TicketTable",
+    className: "table table-bordered  table-striped",
     initialize: function() {
       _.bindAll(this, "render");
       this.collection.bind("reset", this.render);
@@ -48,13 +49,52 @@
     }
   });
 
+  window.ViewTicketView = Backbone.View.extend({
+    tagName: "table",
+    id: "TicketTable",
+    className: "table table-bordered  table-striped",
+    templateSelector: "#TicketViewTemplate",
+    initialize: function() {
+      _.bindAll(this, "render");
+      this.model.bind("change", this.render);
+      this.template = _.template($(this.templateSelector).html());
+      return this;
+    },
+    render: function() {
+      var $TicketContainer, renderedContent;
+      renderedContent = this.template(this.model.toJSON());
+      this.$el.html(renderedContent);
+      $TicketContainer = $("#TicketContainer");
+      $TicketContainer.html("");
+      $TicketContainer.append(this.$el);
+      return this;
+    }
+  });
+
   window.TicketRouter = Backbone.Router.extend({
     routes: {
       "": "home",
-      "index": "home"
+      "index": "home",
+      "view/:id": "view"
     },
     home: function() {
       window.ticketCollection.fetch();
+      return this;
+    },
+    view: function(id) {
+      var ticketModel, ticketView;
+      ticketModel = new Ticket({});
+      ticketModel.url = "./view/" + id + ".json";
+      ticketView = new ViewTicketView({
+        model: ticketModel
+      });
+      ticketModel.fetch({
+        "error": function(error, type) {
+          if (type.status === 403) window.location.reload();
+          return this;
+        }
+      });
+      console.log(ticketView.$el);
       return this;
     }
   });

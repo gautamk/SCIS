@@ -31,6 +31,11 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	
+    /**
+    * Mapping REST functionality
+    * http://book.cakephp.org/2.0/en/development/rest.html
+    */
+    Router::mapResources('recipes');
 	Router::parseExtensions();
 
 /**

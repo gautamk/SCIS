@@ -17,12 +17,18 @@ class TicketsController extends AppController {
 	 * List all available tickets 
 	 */
     public function index() {
-
+        $this->loadModel('DynamicFormResponse');
+        $tickets = $this->DynamicFormResponse->find('all');
+        $this->set('tickets',$tickets);
     }
-	public function getTickets(){
-		$this->loadModel('DynamicFormResponse');
-		$tickets = $this->DynamicFormResponse->find('all');
-		$this->set('tickets',$tickets);
-	}
+    
+    public function view($id=null) {
+        $this->loadModel('DynamicFormResponse');
+        $tickets = $this->DynamicFormResponse->read(null,$id);
+        if($tickets == false ){
+            throw new NotFoundException("Ticket not found");
+        }
+        $this->set(compact('tickets'));
+    }
 
 } // END

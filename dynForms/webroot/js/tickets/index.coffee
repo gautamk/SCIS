@@ -2,7 +2,7 @@
 window.Ticket = Backbone.Model.extend {}
 window.TicketView = Backbone.View.extend {
   tagName: 'tr'
-  templateSelector:"#TicketTemplate"
+  templateSelector:"#TicketIndexTemplate"
   
   initialize:() ->
     _.bindAll @,"render"
@@ -17,11 +17,12 @@ window.TicketView = Backbone.View.extend {
 }
 window.TicketCollection = Backbone.Collection.extend {
   model:window.Ticket,
-  url:"getTickets.json"
+  url:window.location.pathname+".json"
 }
 window.TicketCollectionView = Backbone.View.extend {
   tagName:"table"
   id:"TicketTable"
+  className:"table table-bordered  table-striped"
   initialize:() ->
     _.bindAll @,"render"
     # (Re)Render the view when collection is updated
@@ -38,14 +39,54 @@ window.TicketCollectionView = Backbone.View.extend {
     @
 }
 
+# Render a Particular ticket
+window.ViewTicketView = Backbone.View.extend {
+  tagName:"table"
+  id:"TicketTable"
+  className:"table table-bordered  table-striped"
+  templateSelector:"#TicketViewTemplate"
+  initialize:() ->
+    _.bindAll @,"render"
+    @.model.bind "change" , @.render
+    @.template=_.template $(@.templateSelector).html()
+    @
+  render: ()->
+    renderedContent = @.template @.model.toJSON();
+    @.$el.html renderedContent
+    $TicketContainer = $("#TicketContainer")
+    $TicketContainer.html "" 
+    $TicketContainer.append @.$el
+    @
+
+
+}
 window.TicketRouter = Backbone.Router.extend {
   routes:{
-    ""        :"home"
-    "index"   :"home"
+    ""          :"home"
+    "index"     :"home"
+    "view/:id"  :"view"
   }
   home: () ->
     window.ticketCollection.fetch()
     @
+  view: (id) ->
+    ticketModel = new Ticket {}
+    ticketModel.url = "./view/"+id+".json"
+    ticketView = new ViewTicketView {
+      model:ticketModel
+    }
+    
+    ticketModel.fetch({
+      "error": (error,type) ->
+        window.location.reload() if type.status is 403
+        @
+
+    })
+    console.log ticketView.$el
+    @
+
+
+
 }
 
 jQuery ->
