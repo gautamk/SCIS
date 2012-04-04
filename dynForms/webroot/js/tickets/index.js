@@ -1,4 +1,13 @@
 (function() {
+  var location_path;
+
+  location_path = window.location.pathname;
+
+  /*
+  Add trailing slash to Ajax Request url if not already present
+  */
+
+  window.REQUEST_PATH = location_path[location_path.length - 1] !== "/" ? location_path + "/" : location_path;
 
   window.Ticket = Backbone.Model.extend({});
 
@@ -20,7 +29,7 @@
 
   window.TicketCollection = Backbone.Collection.extend({
     model: window.Ticket,
-    url: window.location.pathname + ".json"
+    url: REQUEST_PATH + ".json"
   });
 
   window.TicketCollectionView = Backbone.View.extend({
@@ -84,7 +93,7 @@
     view: function(id) {
       var ticketModel, ticketView;
       ticketModel = new Ticket({});
-      ticketModel.url = "./view/" + id + ".json";
+      ticketModel.url = window.REQUEST_PATH + "view/" + id + ".json";
       ticketView = new ViewTicketView({
         model: ticketModel
       });
@@ -94,7 +103,6 @@
           return this;
         }
       });
-      console.log(ticketView.$el);
       return this;
     }
   });

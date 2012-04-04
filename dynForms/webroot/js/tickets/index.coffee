@@ -1,3 +1,10 @@
+location_path = window.location.pathname
+###
+Add trailing slash to Ajax Request url if not already present
+###
+window.REQUEST_PATH = if location_path[location_path.length-1] isnt "/" then location_path+"/" else location_path
+
+
 
 window.Ticket = Backbone.Model.extend {}
 window.TicketView = Backbone.View.extend {
@@ -17,7 +24,7 @@ window.TicketView = Backbone.View.extend {
 }
 window.TicketCollection = Backbone.Collection.extend {
   model:window.Ticket,
-  url:window.location.pathname+".json"
+  url:REQUEST_PATH+".json"
 }
 window.TicketCollectionView = Backbone.View.extend {
   tagName:"table"
@@ -71,7 +78,7 @@ window.TicketRouter = Backbone.Router.extend {
     @
   view: (id) ->
     ticketModel = new Ticket {}
-    ticketModel.url = "./view/"+id+".json"
+    ticketModel.url = window.REQUEST_PATH+"view/"+id+".json"
     ticketView = new ViewTicketView {
       model:ticketModel
     }
@@ -82,11 +89,8 @@ window.TicketRouter = Backbone.Router.extend {
         @
 
     })
-    console.log ticketView.$el
+    #console.log ticketView.$el
     @
-
-
-
 }
 
 jQuery ->
