@@ -28,7 +28,8 @@ class UsersController extends AppController {
         //$this->response->header(array('Content-type: application/json'));
         if($this->request->is('ajax')){
             echo json_encode(array("response"=>$this->Auth->loggedIn()));
+        } else {
+            echo $this->Auth->loggedIn();
         }
-        echo $this->Auth->loggedIn();
     }
 }

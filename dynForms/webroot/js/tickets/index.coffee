@@ -58,9 +58,14 @@ window.TicketCollectionView = Backbone.View.extend {
       Binding needs to be placed here because the DOM elements are dynamically
       generated, and binding needs to be done every time they are generated.
     ###
-
+    $(".ticket-row").mouseenter (event)->
+      $(event.currentTarget).find(".ticket-actions").show()
+    $(".ticket-row").mouseleave (event)->
+      
+      $(event.currentTarget).find(".ticket-actions").hide()
     window.$TicketContainer.find("[rel=tooltip]").tooltip({
         placement:"left"
+        delay:10
     });
 
     @
@@ -85,10 +90,25 @@ window.ViewTicketView = Backbone.View.extend {
     @
 }
 
-window.EditTicketView = new Backbone.View.extend {
-  tagName:"table"
+window.EditTicketView = Backbone.View.extend {
+  tagName:"form"
   id:"TicketEditTable"
-  className:"table table-bordered table-condensed  table-striped"
+  className:""
+  templateSelector:"#TicketEditTemplate"
+  initialize: () ->
+    
+    _.bindAll @,"render"
+    @.model.bind "change" , @.render
+    @.template=_.template $(@.templateSelector).html()
+    @
+  render: ()->
+    
+    renderedContent = @.template @.model.toJSON();
+    @.$el.html renderedContent
+    window.$TicketContainer.html ""
+    window.$TicketContainer.append @.$el
+    console.log @.$el
+    @
 }
 
 window.TicketRouter = Backbone.Router.extend {
@@ -99,8 +119,11 @@ window.TicketRouter = Backbone.Router.extend {
     "update/:id":"update"
   }
 
-  initialize:()->
+  # Call this method before executing any routing
+  _pre_route: ()->
+    $('.tooltip').remove();
 
+  initialize:()->
     # Check if the user is logged in every minute
     setInterval @.checkLogin,60*1000 
 
@@ -113,11 +136,13 @@ window.TicketRouter = Backbone.Router.extend {
       window.location.reload() if status.response isnt true
     @
   home: () ->
+    @._pre_route()
     window.ticketCollection.fetch({
         error:@.checkLogin
-      })
+    })
     @
   view: (id) ->
+    @._pre_route()
     ticketModel = new Ticket {}
     ticketModel.url = window.REQUEST_PATH+"view/"+id+".json"
     ticketView = new ViewTicketView {
@@ -128,9 +153,10 @@ window.TicketRouter = Backbone.Router.extend {
     })
     @
   update: (id) ->
+    @._pre_route()
     ticketModel = new Ticket {}
     ticketModel.url = window.REQUEST_PATH+"view/"+id+".json"
-    ticketView = new ViewTicketView {
+    ticketView = new EditTicketView {
       model:ticketModel
     }
     ticketModel.fetch({

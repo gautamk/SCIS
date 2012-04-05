@@ -8,9 +8,9 @@
  */
 class TicketsController extends AppController {
     public $helpers = array('Form', 'Html');
-
+    public $components=array('RequestHandler');
     public function beforeFilter() {
-        
+        $this->Security->requirePut('edit');
     }
 	
     protected function _allow_only_ajax(){
@@ -55,11 +55,13 @@ class TicketsController extends AppController {
 
     /**
     * @author  Gautam
-    * Load a particular ticket
+    * Load a particular ticket and update it 
     * Only AJAX Requests Allowed
     */
     public function edit($id=null){
-        $this->_allow_only_ajax();
+        //$this->_allow_only_ajax();
+        debug($this->request->data);
+        $this->autoRender=false;
     }
 
 } // END

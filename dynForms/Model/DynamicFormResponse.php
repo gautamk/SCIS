@@ -12,7 +12,8 @@ class DynamicFormResponse extends AppModel {
 			"escalation"=>0,
 			"status"=>"pending",
 			"department_id"=>NULL,
-			"browser"=>get_browser(null,true)
+			"priority"=>0,
+			"browser"=>get_browser(null,true),
 		);
 		/**
 		 * 

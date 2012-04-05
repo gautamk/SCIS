@@ -20,6 +20,7 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
+    
 /**
  * Here, we are connecting '/' (base path) to controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file
@@ -31,18 +32,20 @@
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	
-    /**
-    * Mapping REST functionality
-    * http://book.cakephp.org/2.0/en/development/rest.html
-    */
-    Router::mapResources('recipes');
-	Router::parseExtensions();
+
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
  */
 	CakePlugin::routes();
+
+    /**
+    * Mapping REST functionality
+    * http://book.cakephp.org/2.0/en/development/rest.html
+    */
+    Router::mapResources('Tickets',array());
+    Router::parseExtensions();
 
 /**
  * Load the CakePHP default routes. Remove this if you do not want to use

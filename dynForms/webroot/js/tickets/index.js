@@ -60,8 +60,15 @@
             Binding needs to be placed here because the DOM elements are dynamically
             generated, and binding needs to be done every time they are generated.
       */
+      $(".ticket-row").mouseenter(function(event) {
+        return $(event.currentTarget).find(".ticket-actions").show();
+      });
+      $(".ticket-row").mouseleave(function(event) {
+        return $(event.currentTarget).find(".ticket-actions").hide();
+      });
       window.$TicketContainer.find("[rel=tooltip]").tooltip({
-        placement: "left"
+        placement: "left",
+        delay: 10
       });
       return this;
     }
@@ -88,10 +95,26 @@
     }
   });
 
-  window.EditTicketView = new Backbone.View.extend({
-    tagName: "table",
+  window.EditTicketView = Backbone.View.extend({
+    tagName: "form",
     id: "TicketEditTable",
-    className: "table table-bordered table-condensed  table-striped"
+    className: "",
+    templateSelector: "#TicketEditTemplate",
+    initialize: function() {
+      _.bindAll(this, "render");
+      this.model.bind("change", this.render);
+      this.template = _.template($(this.templateSelector).html());
+      return this;
+    },
+    render: function() {
+      var renderedContent;
+      renderedContent = this.template(this.model.toJSON());
+      this.$el.html(renderedContent);
+      window.$TicketContainer.html("");
+      window.$TicketContainer.append(this.$el);
+      console.log(this.$el);
+      return this;
+    }
   });
 
   window.TicketRouter = Backbone.Router.extend({
@@ -100,6 +123,9 @@
       "index": "home",
       "view/:id": "view",
       "update/:id": "update"
+    },
+    _pre_route: function() {
+      return $('.tooltip').remove();
     },
     initialize: function() {
       return setInterval(this.checkLogin, 60 * 1000);
@@ -116,6 +142,7 @@
       return this;
     },
     home: function() {
+      this._pre_route();
       window.ticketCollection.fetch({
         error: this.checkLogin
       });
@@ -123,6 +150,7 @@
     },
     view: function(id) {
       var ticketModel, ticketView;
+      this._pre_route();
       ticketModel = new Ticket({});
       ticketModel.url = window.REQUEST_PATH + "view/" + id + ".json";
       ticketView = new ViewTicketView({
@@ -135,9 +163,10 @@
     },
     update: function(id) {
       var ticketModel, ticketView;
+      this._pre_route();
       ticketModel = new Ticket({});
       ticketModel.url = window.REQUEST_PATH + "view/" + id + ".json";
-      ticketView = new ViewTicketView({
+      ticketView = new EditTicketView({
         model: ticketModel
       });
       ticketModel.fetch({
