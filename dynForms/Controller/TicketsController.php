@@ -9,10 +9,13 @@
 class TicketsController extends AppController {
     public $helpers = array('Form', 'Html');
     public $components=array('RequestHandler');
+
     public function beforeFilter() {
-        $this->Security->requirePut('edit');
+         $this->Security->blackHoleCallback = '_blackhole';
     }
-	
+	protected function _blackhole($type) {
+        
+    }
     protected function _allow_only_ajax(){
         if (! $this->request->is('ajax')){
             throw new NotFoundException("View not found");
@@ -59,9 +62,24 @@ class TicketsController extends AppController {
     * Only AJAX Requests Allowed
     */
     public function edit($id=null){
-        //$this->_allow_only_ajax();
-        debug($this->request->data);
-        $this->autoRender=false;
+        $this->loadModel('DynamicFormResponse');
+        
+        if (!$id && empty($this->data)) {
+            $this->flash(__('Invalid Ticket', true), array('action' => 'index'));
+        }
+        if (!empty($this->data)) {
+            if ($this->DynamicFormResponse->save($this->data)) {
+                $this->flash(__('The Ticket has been updated.', true), array('action' => 'index'));
+            } else {
+            }
+        }
+        if (empty($this->data)) {
+            $this->data = $this->DynamicFormResponse->read(
+                array('_id','status','escalation','priority','department_id'), $id);
+            
+            //$this->data = $this->Post->find('first', array('conditions' => array('_id' => $id)));
+        }
+        
     }
 
 } // END

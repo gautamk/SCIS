@@ -6,7 +6,6 @@ class DynamicFormResponse extends AppModel {
 	public $primaryKey = '_id';
 	public $validate = array();
 	public $actsAs=array('Mongodb.Schemaless');
-	
 	public function getDefaults(){
 		$defaultValues=array(
 			"escalation"=>0,
@@ -57,8 +56,6 @@ END;
 		
 
 		$this->set($this->data);
-		debug($this->data);
-		debug($options);
 	    return parent::beforeSave($options);
 	}
 	/*

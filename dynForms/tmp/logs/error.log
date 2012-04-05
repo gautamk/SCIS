@@ -1,0 +1,233 @@
+2012-04-06 03:51:10 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 03:57:46 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 03:58:59 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:01:00 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:01:29 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:02:01 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:02:08 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:05:19 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:05:47 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:05:57 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:06:06 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:08:09 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:08:12 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:08:59 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:09:22 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:09:36 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view('4f7e0e2a633294e...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-06 04:09:39 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view('4f7e0e2a633294e...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-06 04:09:51 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:16:47 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:17:10 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:18:38 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:19:18 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:19:28 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:19:58 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view('4f7e0e2a633294e...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-06 04:20:01 Error: [MissingActionException] Action TicketsController::4f7e0e2a633294e307000000() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-06 04:28:36 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(227): SecurityComponent->blackHole(Object(TicketsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:28:55 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(227): SecurityComponent->blackHole(Object(TicketsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:29:30 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(227): SecurityComponent->blackHole(Object(TicketsController), 'csrf')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:52:35 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(222): SecurityComponent->blackHole(Object(TicketsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:52:49 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(222): SecurityComponent->blackHole(Object(TicketsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:57:56 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(222): SecurityComponent->blackHole(Object(TicketsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:57:57 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(222): SecurityComponent->blackHole(Object(TicketsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 04:58:58 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(222): SecurityComponent->blackHole(Object(TicketsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-06 05:00:19 Error: [BadRequestException] The request has been black-holed
+#0 /usr/share/lib/php/Cake/Controller/Component/SecurityComponent.php(222): SecurityComponent->blackHole(Object(TicketsController), 'auth')
+#1 [internal function]: SecurityComponent->startup(Object(TicketsController))
+#2 /usr/share/lib/php/Cake/Utility/ObjectCollection.php(130): call_user_func_array(Array, Array)
+#3 [internal function]: ObjectCollection->trigger(Object(CakeEvent))
+#4 /usr/share/lib/php/Cake/Event/CakeEventManager.php(246): call_user_func(Array, Object(CakeEvent))
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(100): Controller->startupProcess()
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

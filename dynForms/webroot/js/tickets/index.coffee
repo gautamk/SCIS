@@ -90,26 +90,7 @@ window.ViewTicketView = Backbone.View.extend {
     @
 }
 
-window.EditTicketView = Backbone.View.extend {
-  tagName:"form"
-  id:"TicketEditTable"
-  className:""
-  templateSelector:"#TicketEditTemplate"
-  initialize: () ->
-    
-    _.bindAll @,"render"
-    @.model.bind "change" , @.render
-    @.template=_.template $(@.templateSelector).html()
-    @
-  render: ()->
-    
-    renderedContent = @.template @.model.toJSON();
-    @.$el.html renderedContent
-    window.$TicketContainer.html ""
-    window.$TicketContainer.append @.$el
-    console.log @.$el
-    @
-}
+
 
 window.TicketRouter = Backbone.Router.extend {
   routes:{
