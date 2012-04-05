@@ -35,26 +35,49 @@
 		 * Add developement version of scripts
 		 * or Production version based on debug level
 		 */
+		$list_of_scripts = array(
+			"debug"=>array(
+				"js"=>array(
+					'jquery-1.7.2',
+					'bootstrap',
+					'underscore',
+					'backbone',
+					'bootstrap-tooltip'
+				),
+				"css"=>array(
+					'cake.generic',
+					'bootstrap',
+					'bootstrap-responsive'
+				)
+			),
+			"production" =>array(
+				"js"=>array(
+					'jquery-1.7.2.min',
+					'bootstrap.min',
+					'underscore-min',
+					'backbone-min',
+					'bootstrap-tooltip'
+				),
+				"css"=>array(
+					'cake.generic',
+					'bootstrap.min',
+					'bootstrap-responsive.min'
+				)
+			)
+		);
 		if(Configure::read('debug') > 0){
-			echo $this->Html->script('jquery-1.7.2');
-			echo $this->Html->script('bootstrap');
-			echo $this->Html->script('underscore');
-			echo $this->Html->script('backbone');
-			
-			echo $this->Html->css('cake.generic');
-
-			echo $this->Html->css('bootstrap');
-			echo $this->Html->css('bootstrap-responsive');
-
+			$current_mode = "debug";
 		}else{
-			echo $this->Html->script('jquery-1.7.2.min');
-			echo $this->Html->script('bootstrap.min');
-			echo $this->Html->script('underscore-min');
-			echo $this->Html->script('backbone-min');
-
-			echo $this->Html->css('bootstrap.min');
-			echo $this->Html->css('bootstrap-responsive.min');
+			$current_mode = "production";
 		}
+
+		foreach ($list_of_scripts[$current_mode]["js"] as $key => $value) {
+				echo $this->Html->script($value);
+		}
+			foreach ($list_of_scripts[$current_mode]["css"] as $key => $value) {
+				echo $this->Html->css($value);
+		}
+
 		// Add this to any `view` recommended is View/Layouts/default.ctp
 		
 		/*
@@ -99,8 +122,11 @@
 					                       ),array("class"=>'btn')); 
 				}
 				?>
-
+				<span>
+				Server Time: <?php echo date("h:i:s") ?>
+				</span>
 			</h1>
+			
 		</div>
 		<div id="content">
 

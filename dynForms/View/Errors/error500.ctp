@@ -17,8 +17,8 @@
  */
 ?>
 <h2><?php echo $name; ?></h2>
-<p class="error">
-	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
+<p class="alert alert-block alert-error">
+	<h2 class="alert-heading" ><?php echo __d('cake', 'Error'); ?>: </h2>
 	<?php echo __d('cake', 'An Internal Error Has Occurred.'); ?>
 </p>
 <?php

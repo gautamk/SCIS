@@ -1,4 +1,12 @@
-
+<style type="text/css" media="screen">
+    #DynamicForm input{
+        width:100%
+    }
+    #DynamicForm textarea{
+        width:100%
+    }
+</style>
+<div id="DynamicForm" class="span10">
 <?php
 echo $this->Form->create(
         $dynamicForm["model"],
@@ -17,3 +25,4 @@ echo $this->Form->end();
 debug($dynamicForm);
 
 ?>
+</div>

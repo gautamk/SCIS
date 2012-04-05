@@ -7,7 +7,7 @@ class UsersController extends AppController {
 	
 	function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('login');
+		$this->Auth->allow('login','is_logged_in');
 	}
 	
 	public function login(){
@@ -21,6 +21,14 @@ class UsersController extends AppController {
 	
 	public function logout() {
     	$this->redirect($this->Auth->logout());
-
 	}
+
+    public function is_logged_in(){
+        $this->autoRender = false;
+        //$this->response->header(array('Content-type: application/json'));
+        if($this->request->is('ajax')){
+            echo json_encode(array("response"=>$this->Auth->loggedIn()));
+        }
+        echo $this->Auth->loggedIn();
+    }
 }

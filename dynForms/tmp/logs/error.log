@@ -810,3 +810,192 @@
 2012-04-02 11:42:47 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2012-04-05 16:27:04 Error: [NotFoundException] View not found
+#0 [internal function]: TicketsController->view('4f760be2633294b...')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-04-05 16:27:53 Error: [NotFoundException] View not found
+#0 [internal function]: TicketsController->view('4f760be2633294b...')
+#1 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#2 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#4 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-04-05 18:03:37 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view('4f760be2633294b...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 18:03:45 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view('4f760be2633294b...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 18:07:08 Error: [MissingActionException] Action TicketsController::logincheck() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-05 18:07:12 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Tickets/login_check.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /home/archer/public_html/SCIS/dynForms/Plugin/DebugKit/View/DebugView.php(82): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(962): DebugView->render(NULL, NULL)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 18:11:30 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Tickets/login_check.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /home/archer/public_html/SCIS/dynForms/Plugin/DebugKit/View/DebugView.php(82): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(962): DebugView->render(NULL, NULL)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 22:08:13 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Users/is_logged_in.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName(NULL)
+#1 /home/archer/public_html/SCIS/dynForms/Plugin/DebugKit/View/DebugView.php(82): View->render(NULL, NULL)
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(962): DebugView->render(NULL, NULL)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(110): Controller->render()
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:22:40 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view('4f6fbd696332945...')
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:22:44 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:26:27 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:29:17 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:29:30 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:30:14 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:30:26 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:31:24 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:31:43 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:31:51 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:33:07 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:33:36 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:34:04 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:34:29 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:34:47 Error: [NotFoundException] View not found
+#0 /home/archer/public_html/SCIS/dynForms/Controller/TicketsController.php(43): TicketsController->_allow_only_ajax()
+#1 [internal function]: TicketsController->view()
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(TicketsController), Array)
+#3 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#5 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-04-05 23:34:51 Error: [MissingActionException] Action TicketsController::asdf() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-05 23:38:46 Error: [MissingActionException] Action TicketsController::asd() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(TicketsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
