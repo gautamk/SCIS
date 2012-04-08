@@ -17,7 +17,7 @@
     <?php echo $this->Session->flash('auth'); ?>
     <?php echo $this->Form->create('User',array("class"=>""));?>
         <fieldset>
-            <legend><h1><?php echo 'SCIS '; ?></h1></legend>
+            <legend><h1>SCIS Staff</h1></legend>
         <?php
             echo $this->Form->input('email',array(
                                     "label"=>"",

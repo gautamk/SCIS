@@ -279,3 +279,49 @@
 #7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2012-04-08 11:51:11 Error: [MissingControllerException] Controller class DisplayController could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-08 12:09:02 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-08 12:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+#0 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-04-08 12:09:41 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Pages/.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('')
+#1 /home/archer/public_html/SCIS/dynForms/Plugin/DebugKit/View/DebugView.php(82): View->render('', NULL)
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(962): DebugView->render('', NULL)
+#3 /home/archer/public_html/SCIS/dynForms/Controller/PagesController.php(70): Controller->render('')
+#4 [internal function]: PagesController->display()
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-08 12:09:51 Error: [MissingViewException] View file "/home/archer/public_html/SCIS/dynForms/View/Pages/.ctp" is missing.
+#0 /usr/share/lib/php/Cake/View/View.php(460): View->_getViewFileName('')
+#1 /home/archer/public_html/SCIS/dynForms/Plugin/DebugKit/View/DebugView.php(82): View->render('', NULL)
+#2 /usr/share/lib/php/Cake/Controller/Controller.php(962): DebugView->render('', NULL)
+#3 /home/archer/public_html/SCIS/dynForms/Controller/PagesController.php(72): Controller->render('')
+#4 [internal function]: PagesController->display()
+#5 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#6 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#7 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#8 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2012-04-08 12:16:46 Error: [MissingActionException] Action PagesController::display() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-08 12:17:27 Error: [MissingActionException] Action PagesController::display() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-04-08 12:22:54 Error: [MissingActionException] Action PagesController::asds() could not be found.
+#0 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

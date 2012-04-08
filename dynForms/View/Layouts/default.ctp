@@ -137,13 +137,18 @@
 																			 "controller" => "Users",
 																			 "action" =>"logout"
 																			 ));  ?>
+							<?php else: ?>
+								<?php echo $this->Html->link("Staff Login", array(
+																			 "controller" => "Users",
+																			 "action" =>"login"
+																			 ));  ?>
 							<?php endif; ?>
 						</p>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
 		</div>
-	<div id="container">
+	<div class="container" id="container">
 		<div id="header">
 			<h1>
 				

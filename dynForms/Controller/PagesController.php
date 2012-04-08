@@ -43,18 +43,19 @@ class PagesController extends AppController {
  */
 	public $uses = array();
 
+	public function beforeFilter() {
+        $this -> Auth -> allow(array('index'));
+    }
+
 /**
  * Displays a view
  *
  * @param mixed What page to display
  */
-	public function display() {
+	public function diagnose() {
 		$path = func_get_args();
 
 		$count = count($path);
-		if (!$count) {
-			$this->redirect('/');
-		}
 		$page = $subpage = $title = null;
 
 		if (!empty($path[0])) {
@@ -68,7 +69,11 @@ class PagesController extends AppController {
 		}
 		$this->set(compact('page', 'subpage'));
 		$this->set('title_for_layout', $title);
-		$this->render(implode('/', $path));
+		$this->render('home');
+	}
+
+	public function index(){
+
 	}
 
 }
