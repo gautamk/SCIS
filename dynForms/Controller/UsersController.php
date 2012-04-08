@@ -11,12 +11,13 @@ class UsersController extends AppController {
 	}
 	
 	public function login(){
-		//echo AuthComponent::password("password");die();
-		if ($this->Auth->login()) {
-        	$this->redirect($this->Auth->redirect());
-    	} else {
-        	$this->Session->setFlash(__('Invalid username or password, try again'));
-    	}
+        if($this->request->is("post")){
+            if ($this->Auth->login()) {
+                $this->redirect($this->Auth->redirect());
+            } else {
+                $this->Auth->flash('Invalid username or password, try again');
+            }
+        }
 	}
 	
 	public function logout() {

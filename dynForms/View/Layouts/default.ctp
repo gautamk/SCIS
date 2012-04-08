@@ -42,7 +42,8 @@
 					'bootstrap',
 					'underscore',
 					'backbone',
-					'bootstrap-tooltip'
+					'bootstrap-tooltip',
+					"bootstrap-alert"
 				),
 				"css"=>array(
 					'cake.generic',
@@ -56,7 +57,8 @@
 					'bootstrap.min',
 					'underscore-min',
 					'backbone-min',
-					'bootstrap-tooltip'
+					'bootstrap-tooltip',
+					"bootstrap-alert"
 				),
 				"css"=>array(
 					'cake.generic',
@@ -81,21 +83,21 @@
 		// Add this to any `view` recommended is View/Layouts/default.ctp
 		
 		/*
-		    	WWW_ROOT generally refers to your webroot directory
-		    	DS is usually '/'
-		    	$this->params['controller'] returns controller name in lowercase 
-		    	$this->params['action'] returns action name in lowercase 
-		    	Refer 
-		    		* http://book.cakephp.org/2.0/en/core-libraries/global-constants-and-functions.html
-		    		* http://stackoverflow.com/a/1425219
+					WWW_ROOT generally refers to your webroot directory
+					DS is usually '/'
+					$this->params['controller'] returns controller name in lowercase 
+					$this->params['action'] returns action name in lowercase 
+					Refer 
+						* http://book.cakephp.org/2.0/en/core-libraries/global-constants-and-functions.html
+						* http://stackoverflow.com/a/1425219
 		*/
 		
 		if (is_file( WWW_ROOT . 'js' . DS . $this->params['controller'] . DS . $this->params['action'] . '.js')) {
-		        echo $this->Html->script($this->params['controller'].DS.$this->params['action']);
+						echo $this->Html->script($this->params['controller'].DS.$this->params['action']);
 		}
 		
 		if (is_file(WWW_ROOT . 'css' . DS . $this->params['controller'] . DS . $this->params['action'] . '->css')) {
-		        echo $this->Html->css($this->params['controller'].DS.$this->params['action']);
+						echo $this->Html->css($this->params['controller'].DS.$this->params['action']);
 		}
 		
 		/*
@@ -110,27 +112,48 @@
 ?>
 </head>
 <body>
+	<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+		</style>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">SCIS</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Home</a></li>
+						</ul>
+						<p class="navbar-text pull-right">
+							<?php if( AuthComponent::user('_id') || AuthComponent::user('id')  ): ?>
+								Logged in as <?php echo AuthComponent::user('email'); ?>
+								<?php echo $this->Html->link("logout", array(
+																			 "controller" => "Users",
+																			 "action" =>"logout"
+																			 ));  ?>
+							<?php endif; ?>
+						</p>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
 	<div id="container">
 		<div id="header">
 			<h1>
-				<?php 
-				if( AuthComponent::user('_id') || AuthComponent::user('id')  ){
-					echo AuthComponent::user('email');
-					echo $this->Html->link("logout", array(
-					                       "controller" => "Users",
-					                       "action" =>"logout"
-					                       ),array("class"=>'btn')); 
-				}
-				?>
-				<span>
-				Server Time: <?php echo date("h:i:s") ?>
-				</span>
+				
+				
 			</h1>
 			
 		</div>
 		<div id="content">
 
-			<?php echo $this->Session->flash(); ?>
+			
 
 			<?php echo $this->fetch('content'); ?>
 		</div>

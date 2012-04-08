@@ -25,7 +25,7 @@
     <table class="table table-striped table-bordered" id="TicketCollectionTable" >
         <caption>
         <h3>List of Tickets
-            <button title="Refresh" class="btn btn-success" onclick="ticketCollection.fetch();"><i class="icon-refresh" ></i></button>
+            <button title="Refresh" class="btn btn-success btn-mini" onclick="ticketCollection.fetch();"><i class="icon-refresh" ></i></button>
         </h3>
         </caption>
         <thead>
