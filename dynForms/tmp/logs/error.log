@@ -325,3 +325,16 @@
 #1 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
 #2 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2012-04-08 13:33:34 Error: [MissingTableException] Table dynamicForms for model DynamicForm was not found in datasource default.
+#0 /usr/share/lib/php/Cake/Model/Model.php(3380): Model->setSource('dynamicForms')
+#1 /usr/share/lib/php/Cake/Model/Model.php(2635): Model->getDataSource()
+#2 /usr/share/lib/php/Cake/Model/Model.php(1491): Model->find('first', Array)
+#3 /home/archer/public_html/SCIS/dynForms/Model/DynamicForm.php(39): Model->read(NULL, '4f6d2f686332943...')
+#4 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(56): DynamicForm->isValidForm('4f6d2f686332943...')
+#5 /home/archer/public_html/SCIS/dynForms/Controller/DynamicFormsController.php(108): DynamicFormsController->getForm('4f6d2f686332943...')
+#6 [internal function]: DynamicFormsController->gf('4f6d2f686332943...')
+#7 /usr/share/lib/php/Cake/Controller/Controller.php(488): ReflectionMethod->invokeArgs(Object(DynamicFormsController), Array)
+#8 /usr/share/lib/php/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#9 /usr/share/lib/php/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(DynamicFormsController), Object(CakeRequest), Object(CakeResponse))
+#10 /home/archer/public_html/SCIS/dynForms/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

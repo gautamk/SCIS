@@ -129,6 +129,8 @@
 					<div class="nav-collapse">
 						<ul class="nav">
 							<li class="active"><a href="#">Home</a></li>
+							<li><a>Server Time : <?php echo Date('h:i:s a'); ?></a></li>
+							
 						</ul>
 						<p class="navbar-text pull-right">
 							<?php if( AuthComponent::user('_id') || AuthComponent::user('id')  ): ?>
@@ -151,15 +153,9 @@
 	<div class="container" id="container">
 		<div id="header">
 			<h1>
-				
-				
 			</h1>
-			
 		</div>
 		<div id="content">
-
-			
-
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
