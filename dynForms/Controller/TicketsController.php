@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * Load Email component
+ */
+App::uses('CakeEmail', 'Network/Email');
+/**
  * Manage Ticktets in the database
  *
  * @package Controller
@@ -11,7 +15,9 @@ class TicketsController extends AppController {
     public $components=array('RequestHandler');
 
     public function beforeFilter() {
-         $this->Security->blackHoleCallback = '_blackhole';
+        $this -> Auth -> allow(array('status'));
+        $this->Security->blackHoleCallback = '_blackhole';
+        $this->loadModel('DynamicFormResponse');
     }
 	protected function _blackhole($type) {
         
@@ -30,7 +36,6 @@ class TicketsController extends AppController {
         // Get Data from Mongodb only if Its an Ajax Request
         if ($this->request->is('ajax')) {
             $this->disableCache();
-            $this->loadModel('DynamicFormResponse');
             $tickets = $this->DynamicFormResponse->find('all');
             $this->set('tickets',$tickets);
         }
@@ -46,7 +51,6 @@ class TicketsController extends AppController {
         $this->_allow_only_ajax();
 
         $this->response->disableCache();
-        $this->loadModel('DynamicFormResponse');
         $tickets = $this->DynamicFormResponse->read(null,$id);
         if($tickets == false ){
             throw new NotFoundException("Ticket not found");
@@ -62,7 +66,6 @@ class TicketsController extends AppController {
     * Only AJAX Requests Allowed
     */
     public function edit($id=null){
-        $this->loadModel('DynamicFormResponse');
         
         if (!$id && empty($this->data)) {
             $this->flash(__('Invalid Ticket', true), array('action' => 'index'));
@@ -80,6 +83,52 @@ class TicketsController extends AppController {
             //$this->data = $this->Post->find('first', array('conditions' => array('_id' => $id)));
         }
         
+    }
+
+    protected function _send_email($from=null,$to=null,$subject=null,$view_vars=null){
+        if(is_null($from)||
+           is_null($to)||
+           is_null($subject)||
+           is_null($view_vars)
+           ){
+            return false;
+        }
+        debug($view_vars);
+        $email = new CakeEmail('gmail');
+        return $email   ->template('default', null)
+                        ->emailFormat('both')
+                        ->from($from)
+                        ->to($to)
+                        ->subject($subject)
+                        ->viewVars($view_vars)
+                        ->send();
+        
+    }
+
+    public function email($id=null){
+        $this->autoRender = false;
+        echo $this->_send_email(
+            'webmaster@scis.com',
+            'vinothvetrivel@gmail.com',
+            "Regarding your problem",
+            array(
+                "id"=>$id,
+                "message"=>"This is Regarding your ticket",
+                "status"=>"somthing",
+            )
+        );
+    }
+
+    public function status($id=null){
+        if(is_null($id)){
+            $this->set("ticket",false);
+        } else {
+            $result = $this->DynamicFormResponse->isValidResponse($id);
+            if($result == false){
+                throw new NotFoundException("Ticket Not found !");
+            }
+            $this->set("ticket",$result);
+        }
     }
 
 } // END

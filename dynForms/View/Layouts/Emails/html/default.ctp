@@ -25,7 +25,5 @@
 
 <body>
 	<?php echo $content_for_layout;?>
-
-	<p>This email was sent using the <a href="http://cakephp.org">CakePHP Framework</a></p>
 </body>
 </html>

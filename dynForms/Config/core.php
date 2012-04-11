@@ -347,3 +347,40 @@ Cache::config('debug_kit', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+/**
+ * Custom SCIS Application configurations
+*/
+
+
+/**
+ * A list of possible status for tickets .
+ * The first element (Array Index 0) of the array is considered the default status 
+ * when tickets are created.
+ */
+Configure::write("scis.ticket.status.options",array(
+	"pending",
+	"delayed",
+	"completed"
+));
+
+/**
+ * A list of possible escalations for tickets .
+ * The first element (Array Index 0) of the array is considered the default escalation
+ * when tickets are created.
+ */
+Configure::write("scis.ticket.escalation.options",array(
+    "executive",
+    "team leader",
+    "manager"
+));
+/**
+ * A list of possible priorities for tickets .
+ * The first element (Array Index 0) of the array is considered the default priority
+ * when tickets are created.
+ */
+Configure::write("scis.ticket.priority.options",array(
+    "low",
+    "medium",
+    "high"
+));

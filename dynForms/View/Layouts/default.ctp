@@ -43,7 +43,8 @@
 					'underscore',
 					'backbone',
 					'bootstrap-tooltip',
-					"bootstrap-alert"
+					"bootstrap-alert",
+					"bootstrap-modal"
 				),
 				"css"=>array(
 					'cake.generic',
@@ -58,7 +59,8 @@
 					'underscore-min',
 					'backbone-min',
 					'bootstrap-tooltip',
-					"bootstrap-alert"
+					"bootstrap-alert",
+					"bootstrap-modal"
 				),
 				"css"=>array(
 					'cake.generic',

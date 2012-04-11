@@ -8,10 +8,10 @@ class DynamicFormResponse extends AppModel {
 	public $actsAs=array('Mongodb.Schemaless');
 	public function getDefaults(){
 		$defaultValues=array(
-			"escalation"=>0,
-			"status"=>"pending",
+			"escalation"=>Configure::read("scis.ticket.escalation.options.0"),
+			"status"=>Configure::read("scis.ticket.status.options.0"),
 			"department_id"=>NULL,
-			"priority"=>0,
+			"priority"=>Configure::read("scis.ticket.priority.options.0"),
 			"browser"=>get_browser(null,true),
 		);
 		/**
@@ -23,11 +23,11 @@ class DynamicFormResponse extends AppModel {
 		$regex = <<<'END'
 /
   (
-    (?: [\x00-\x7F]                 # single-byte sequences   0xxxxxxx
-    |   [\xC0-\xDF][\x80-\xBF]      # double-byte sequences   110xxxxx 10xxxxxx
-    |   [\xE0-\xEF][\x80-\xBF]{2}   # triple-byte sequences   1110xxxx 10xxxxxx * 2
-    |   [\xF0-\xF7][\x80-\xBF]{3}   # quadruple-byte sequence 11110xxx 10xxxxxx * 3 
-    )+                              # ...one or more times
+	(?: [\x00-\x7F]                 # single-byte sequences   0xxxxxxx
+	|   [\xC0-\xDF][\x80-\xBF]      # double-byte sequences   110xxxxx 10xxxxxx
+	|   [\xE0-\xEF][\x80-\xBF]{2}   # triple-byte sequences   1110xxxx 10xxxxxx * 2
+	|   [\xF0-\xF7][\x80-\xBF]{3}   # quadruple-byte sequence 11110xxx 10xxxxxx * 3 
+	)+                              # ...one or more times
   )
 | .                                 # anything else
 /x
@@ -45,18 +45,18 @@ END;
 	 * @return bool
 	 */
 	public function beforeSave($options = array()) {
-	    // Add default values if not set already
-	    foreach ($this->getDefaults() as $fieldName => $defaultValue) {
-	        if (empty($this->data[$this->alias][$fieldName])){
-	        	//$this->data[$this->alias][$fieldName] = $defaultValue;
-	        	$this->set($fieldName,$defaultValue);
-	        }
-	        	
-	    }
+		// Add default values if not set already
+		foreach ($this->getDefaults() as $fieldName => $defaultValue) {
+			if (empty($this->data[$this->alias][$fieldName])){
+				//$this->data[$this->alias][$fieldName] = $defaultValue;
+				$this->set($fieldName,$defaultValue);
+			}
+				
+		}
 		
 
 		$this->set($this->data);
-	    return parent::beforeSave($options);
+		return parent::beforeSave($options);
 	}
 	/*
 	public function save($data = null, $validate = true, $fieldList = array()){
@@ -73,6 +73,17 @@ END;
 
 	public function getSchema() {
 		return $this -> _schema;
+	}
+
+	public function isValidResponse($id=null){
+		if(is_null($id) == true){
+			return false;
+		}
+		/**
+		 *@var Mongodb Cursor 
+		 */
+		$results = $this->read(null,$id);
+		return $results==null ? false : $results;
 	}
 
 }

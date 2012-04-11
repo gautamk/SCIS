@@ -18,9 +18,18 @@
         <legend><?php echo 'Update Ticket';?></legend>
     <?php
         echo $this->Form->hidden('_id');
-        echo $this->Form->input('status');
-        echo $this->Form->input('escalation');
-        echo $this->Form->input('priority');
+        echo $this->Form->input('status',array(
+                "options"=>Configure::read("scis.ticket.status.options"),
+            )
+        );
+        echo $this->Form->input('escalation',array(
+                "options"=>Configure::read("scis.ticket.escalation.options"),
+            )
+        );
+        echo $this->Form->input('priority',array(
+                "options"=>Configure::read("scis.ticket.priority.options"),
+            )
+        );
         echo $this->Form->input('department_id',array("type"=>"text"));
     ?>
     </fieldset>

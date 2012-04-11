@@ -16,4 +16,5 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<?php echo $content; ?>
+### Your Issue (ID:<?php echo $id; ?>) is <?php echo $status; ?> ###
+<?php echo $message ?>

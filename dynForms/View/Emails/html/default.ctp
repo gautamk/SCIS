@@ -14,12 +14,17 @@
  * @package       app.View.Emails.html
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
+ * 
+ * <?php 
+ * $content = explode("\n", $content);
+ * foreach ($content as $line): ?>
+ *  echo '<p> ' . $line . '</p>';
+ * endforeach;?>
  */
 ?>
-<?php
-$content = explode("\n", $content);
-
-foreach ($content as $line):
-	echo '<p> ' . $line . '</p>';
-endforeach;
-?>
+<div id="content">
+    <h1>Your Issue (ID:<?php echo $id; ?>) is <?php echo $status; ?></h1>
+    <p>
+        <?php echo $message ?>
+    </p>
+</div>

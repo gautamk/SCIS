@@ -29,7 +29,7 @@ class DynamicForm extends AppModel {
      * @return boolean if form is not valid
      * @return mixed if form is valid (the form data from the database).
      */ 
-    public function isValidForm($id) {
+    public function isValidForm($id=null) {
         if(is_null($id) == true){
             return false;
         }
