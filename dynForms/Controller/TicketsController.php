@@ -27,6 +27,22 @@ class TicketsController extends AppController {
             throw new NotFoundException("View not found");
         }
     }
+    /**
+     * @param $id The ticket ID
+     * Checks if a ticket is valid , If not throws a Not found exception.
+     * If the ticket it found , It returns the result
+     */
+    protected function _is_valid_ticket($id=null){
+        if(is_null($id)){
+            throw new NotFoundException("Ticket not found");
+        }
+        $result = $this->DynamicFormResponse->isValidResponse($id);
+        
+        if(is_null($result)||$result==false){
+            throw new NotFoundException("Ticket not found");
+        }
+        return $result;
+    }
 
 	/*
 	 * List all available tickets 
@@ -51,7 +67,7 @@ class TicketsController extends AppController {
         $this->_allow_only_ajax();
 
         $this->response->disableCache();
-        $tickets = $this->DynamicFormResponse->read(null,$id);
+        $tickets = $this->_is_valid_ticket($id);
         if($tickets == false ){
             throw new NotFoundException("Ticket not found");
         }
@@ -63,12 +79,15 @@ class TicketsController extends AppController {
     /**
     * @author  Gautam
     * Load a particular ticket and update it 
-    * Only AJAX Requests Allowed
+    * 
     */
     public function edit($id=null){
         
         if (!$id && empty($this->data)) {
-            $this->flash(__('Invalid Ticket', true), array('action' => 'index'));
+            throw new NotFoundException("Ticket not Found");
+        }
+        if($this->DynamicFormResponse->isValidResponse($id) == false){
+            throw new NotFoundException("Ticket not Found");
         }
         if (!empty($this->data)) {
             if ($this->DynamicFormResponse->save($this->data)) {
@@ -85,19 +104,17 @@ class TicketsController extends AppController {
         
     }
 
-    protected function _send_email($from=null,$to=null,$subject=null,$view_vars=null){
-        if(is_null($from)||
-           is_null($to)||
+    protected function _send_email($to=null,$subject=null,$view_vars=null){
+        if(is_null($to)||
            is_null($subject)||
            is_null($view_vars)
            ){
             return false;
         }
-        debug($view_vars);
         $email = new CakeEmail('gmail');
         return $email   ->template('default', null)
                         ->emailFormat('both')
-                        ->from($from)
+                        ->from(Configure::read("email.from"))
                         ->to($to)
                         ->subject($subject)
                         ->viewVars($view_vars)
@@ -106,27 +123,36 @@ class TicketsController extends AppController {
     }
 
     public function email($id=null){
-        $this->autoRender = false;
-        echo $this->_send_email(
-            'webmaster@scis.com',
-            'vinothvetrivel@gmail.com',
-            "Regarding your problem",
-            array(
-                "id"=>$id,
-                "message"=>"This is Regarding your ticket",
-                "status"=>"somthing",
-            )
-        );
+        $result = $this->_is_valid_ticket($id);
+        if($this->request->is("get")){
+            $this->set("get",true);
+            $this->set("email",
+                isset($result["DynamicFormResponse"]["email"])?$result["DynamicFormResponse"]["email"]:false);
+            $this->set("id",$result["DynamicFormResponse"]["_id"]);
+        }
+        if($this->request->is("post")){
+            $this->_send_email(
+                $this->data["email"]["to"],
+                $this->data["email"]["subject"],
+                array(
+                    "message"=>$this->data["email"]["message"],
+                    "id"=>$id,
+                    "status"=>$result["DynamicFormResponse"]["status"]
+                )
+            );
+            $this->autoRender=false;
+            $this->flash("Email has been sent ",array(
+                         "controller"=>"tickets",
+                         "action"=>"index",
+            ));
+        }
     }
 
     public function status($id=null){
         if(is_null($id)){
             $this->set("ticket",false);
         } else {
-            $result = $this->DynamicFormResponse->isValidResponse($id);
-            if($result == false){
-                throw new NotFoundException("Ticket Not found !");
-            }
+            $result = $this->_is_valid_ticket($id);
             $this->set("ticket",$result);
         }
     }

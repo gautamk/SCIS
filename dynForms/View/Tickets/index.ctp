@@ -15,7 +15,10 @@
                 <a href="<%= REQUEST_PATH+'edit/'+DynamicFormResponse._id %>" 
                 class="btn btn-mini btn-info" rel="tooltip" title="Update" >
                 <i class="icon-pencil"></i></a>
-                <div>
+
+                <a href="<%= REQUEST_PATH+'email/'+DynamicFormResponse._id %>" 
+                class="btn btn-mini btn-info" rel="tooltip" title="Send Email" >
+                <i class=" icon-envelope"></i></a>
             <div>
         </td>
         
@@ -47,9 +50,17 @@
     </table>
 </script>
 <script type="text/template" id="TicketViewTemplate" >
-    <a href="<%= REQUEST_PATH+'edit/'+DynamicFormResponse._id %>" 
+
+    <div class=" btn-group">
+        <a href="<%= REQUEST_PATH+'edit/'+DynamicFormResponse._id %>" 
                 class="btn btn-large btn-info" rel="tooltip" title="Update" >
                 <i class="icon-pencil"></i></a>
+        <a href="<%= REQUEST_PATH+'email/'+DynamicFormResponse._id %>" 
+                class="btn btn-large btn-info" rel="tooltip" title="Send Email" >
+                <i class="icon-envelope"></i></a>
+    </div>
+
+    
     <table class="table table-striped table-bordered table-condensed" >
     <!--
         Recurse through the list of Key value pairs 
