@@ -12,10 +12,16 @@
 
     }
 </style>
+<a class="btn btn-large btn-primary" href="<?php echo Router::url(array("controller"=>"tickets","action"=>"index")); ?>">
+    Index
+</a>
 <div class="posts form" id="EditFormContainer">
 <?php echo $this->Form->create('DynamicFormResponse' , array( 'type' => 'put' ));?>
     <fieldset>
-        <legend><?php echo 'Update Ticket';?></legend>
+        <legend>
+            <?php echo 'Update Ticket';?>
+           
+        </legend>
     <?php
         echo $this->Form->hidden('_id');
         echo $this->Form->input('status',array(

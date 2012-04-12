@@ -9,6 +9,7 @@ App::uses('CakeEmail', 'Network/Email');
  *
  * @package Controller
  * @author  Gautam
+ * @todo Sanitize the Input
  */
 class TicketsController extends AppController {
     public $helpers = array('Form', 'Html');
@@ -16,7 +17,7 @@ class TicketsController extends AppController {
 
     public function beforeFilter() {
         $this -> Auth -> allow(array('status'));
-        $this->Security->blackHoleCallback = '_blackhole';
+        //$this->Security->blackHoleCallback = '_blackhole';
         $this->loadModel('DynamicFormResponse');
     }
 	protected function _blackhole($type) {
@@ -79,7 +80,7 @@ class TicketsController extends AppController {
     /**
     * @author  Gautam
     * Load a particular ticket and update it 
-    * 
+    * @param id : string , Ticket ID
     */
     public function edit($id=null){
         
@@ -122,6 +123,10 @@ class TicketsController extends AppController {
         
     }
 
+    /**
+     * @param id : string , Ticket ID 
+     * Sends Emails
+     */ 
     public function email($id=null){
         $result = $this->_is_valid_ticket($id);
         if($this->request->is("get")){

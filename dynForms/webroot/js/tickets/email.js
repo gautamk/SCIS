@@ -11,9 +11,7 @@
       if ($(event.target).find("#emailMessage").val() === "") {
         ret = confirm("Are you sure ?\nSend without a Message body ? ");
       }
-      ret;
-
-      return false;
+      return ret;
     });
     return this;
   });

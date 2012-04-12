@@ -44,7 +44,8 @@
 					'backbone',
 					'bootstrap-tooltip',
 					"bootstrap-alert",
-					"bootstrap-modal"
+					"bootstrap-modal",
+					"highcharts.src",
 				),
 				"css"=>array(
 					'cake.generic',
@@ -60,7 +61,8 @@
 					'backbone-min',
 					'bootstrap-tooltip',
 					"bootstrap-alert",
-					"bootstrap-modal"
+					"bootstrap-modal",
+					"highcharts"
 				),
 				"css"=>array(
 					'cake.generic',
