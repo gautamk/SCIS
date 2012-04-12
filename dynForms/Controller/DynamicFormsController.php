@@ -108,4 +108,11 @@ class DynamicFormsController extends AppController {
         $this -> getForm($id);
     }
 
+    public function list_forms(){
+        $result = $this->DynamicForm->find('all',array(
+            "fields"=>array("_id","created","description")
+        ));
+        $this->set("forms",$result);
+    }
+
 }

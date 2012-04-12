@@ -44,6 +44,23 @@
       "status": "status",
       "priority": "priority"
     },
+    initialize: function() {
+      return setInterval(this.checkLogin, 60 * 1000);
+    },
+    checkLogin: function(error, type) {
+      /*
+                Reload the page if user has been logged out.
+      */
+
+      var $jxhr;
+      $jxhr = $.getJSON(window.REQUEST_LOCATION + "../users/is_logged_in.json");
+      $jxhr.success(function(status) {
+        if (status.response !== true) {
+          return window.location.reload();
+        }
+      });
+      return this;
+    },
     index: function() {
       return this;
     },
@@ -52,7 +69,7 @@
         if (window._chart !== null) {
           window._chart.destroy();
         }
-        return window._chart = window._new_chart("Ticket Priorities", response);
+        return window._chart = window._new_chart("Priority Chart", response);
       });
       return this;
     },
@@ -61,7 +78,7 @@
         if (window._chart !== null) {
           window._chart.destroy();
         }
-        return window._chart = window._new_chart("Ticket Status Distribution", response);
+        return window._chart = window._new_chart("Status Chart", response);
       });
       return this;
     },
@@ -70,7 +87,7 @@
         if (window._chart !== null) {
           window._chart.destroy();
         }
-        return window._chart = window._new_chart("Escalation Distribution", response);
+        return window._chart = window._new_chart("Escalation Chart", response);
       });
       return this;
     },

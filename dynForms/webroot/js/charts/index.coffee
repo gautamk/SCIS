@@ -35,6 +35,18 @@ window.Router = Backbone.Router.extend {
         "status":"status"
         "priority":"priority"
     }
+    initialize:()->
+        # Check if the user is logged in every minute
+        setInterval @.checkLogin,60*1000 
+
+    checkLogin:(error,type) ->
+        ###
+          Reload the page if user has been logged out.
+        ###
+        $jxhr = $.getJSON(window.REQUEST_LOCATION+"../users/is_logged_in.json")
+        $jxhr.success (status)->
+          window.location.reload() if status.response isnt true
+        @
     index: ()->
         @
 

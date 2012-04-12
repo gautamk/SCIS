@@ -5,6 +5,8 @@
         <%= DynamicFormResponse.brief_description === undefined ? DynamicFormResponse.description:DynamicFormResponse.brief_description %>
         </td>
         <td><%= DynamicFormResponse.status %></td>
+        <td><%= DynamicFormResponse.escalation %></td>
+        <td><%= DynamicFormResponse.priority %></td>
         <td><%= DynamicFormResponse._id %></td>
         <td class=" ">
             <div class=" ticket-actions btn-group">
@@ -36,6 +38,8 @@
                 <th>Email</th>
                 <th>Description</th>
                 <th>Status</th>
+                <th>Escalation</th>
+                <th>Priority</th>
                 <th>Ticket ID</th>
                 <th >Actions</th>
             </tr>

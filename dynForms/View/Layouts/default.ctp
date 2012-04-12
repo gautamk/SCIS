@@ -132,7 +132,22 @@
 					<a class="brand" href="#">SCIS</a>
 					<div class="nav-collapse">
 						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
+							<li ><a href="<?php echo Router::url(array("controller"=>"pages")); ?>">Home</a></li>
+							<?php if( AuthComponent::user('_id') || AuthComponent::user('id')  ): ?>
+								<li>
+									<a href="<?php echo Router::url(array("controller"=>"DynamicForms","action"=>"list_forms")); ?>" 
+										title="Ticket manager">Form List</a>
+								</li>
+								<li>
+									<a href="<?php echo Router::url(array("controller"=>"tickets")); ?>" 
+										title="Ticket manager">Ticket Manager</a>
+								</li>
+								<li>
+									<a href="<?php echo Router::url(array("controller"=>"charts")) ?>" 
+									title="Charts">Charts</a>
+								</li>
+								
+							<?php endif; ?>
 							<li><a>Server Time : <?php echo Date('h:i:s a'); ?></a></li>
 							
 						</ul>
