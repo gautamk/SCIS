@@ -8,10 +8,10 @@ class DynamicFormResponse extends AppModel {
 	public $actsAs=array('Mongodb.Schemaless');
 	public function getDefaults(){
 		$defaultValues=array(
-			"escalation"=>Configure::read("scis.ticket.escalation.options.0"),
-			"status"=>Configure::read("scis.ticket.status.options.0"),
+			"escalation"=>Configure::read("scis.ticket.escalation.default"),
+			"status"=>Configure::read("scis.ticket.status.default"),
 			"department_id"=>NULL,
-			"priority"=>Configure::read("scis.ticket.priority.options.0"),
+			"priority"=>Configure::read("scis.ticket.priority.default"),
 			"browser"=>get_browser(null,true),
 		);
 		/**

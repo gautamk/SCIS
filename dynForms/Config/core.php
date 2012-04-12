@@ -355,32 +355,46 @@ Cache::config('debug_kit', array(
 
 /**
  * A list of possible status for tickets .
- * The first element (Array Index 0) of the array is considered the default status 
  * when tickets are created.
  */
 Configure::write("scis.ticket.status.options",array(
-	"pending",
-	"delayed",
-	"completed"
+	"pending"=>"Pending",
+	"delayed"=>"Delayed",
+	"completed"=>"Completed"
 ));
+/**
+ * The default status
+ */
+Configure::write("scis.ticket.status.default","pending");
+
 
 /**
  * A list of possible escalations for tickets .
- * The first element (Array Index 0) of the array is considered the default escalation
  * when tickets are created.
  */
 Configure::write("scis.ticket.escalation.options",array(
-    "executive",
-    "team leader",
-    "manager"
+    "executive"=>"Executive",
+    "team leader"=>"Team Leader",
+    "manager"=>"Manager"
 ));
 /**
+ * The default escalation
+ */
+Configure::write("scis.ticket.escalation.default","executive");
+
+
+
+/**
  * A list of possible priorities for tickets .
- * The first element (Array Index 0) of the array is considered the default priority
  * when tickets are created.
  */
 Configure::write("scis.ticket.priority.options",array(
-    "low",
-    "medium",
-    "high"
+    "low"=>"Low",
+    "medium"=>"Medium",
+    "high"=>"High"
 ));
+
+/**
+ * The default priority
+ */
+Configure::write("scis.ticket.priority.default","executive");
