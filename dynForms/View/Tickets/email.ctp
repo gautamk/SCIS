@@ -15,6 +15,9 @@
         echo $this->Form->create("email",array(
                 "class"=>"hero-unit "
              ));
+    ?>
+    <h1>Send Email</h1>
+    <?php
         $common_class = "span8";
         echo  $email==false?
                 $this->Form->input("to",array(
@@ -39,7 +42,7 @@
         ));
 
         echo $this->Form->submit("Send",array(
-                "class"=>"btn btn-primary btn-large"
+                "class"=>"btn btn-primary ".$common_class
             ));
         echo $this->Form->end();
 

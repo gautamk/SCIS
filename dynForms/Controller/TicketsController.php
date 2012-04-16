@@ -94,14 +94,30 @@ class TicketsController extends AppController {
             if ($this->DynamicFormResponse->save($this->data)) {
                 $this->flash(__('The Ticket has been updated.', true), array('action' => 'index'));
             } else {
+                debug("isSeen");
             }
         }
         if (empty($this->data)) {
             $this->data = $this->DynamicFormResponse->read(
                 array('_id','status','escalation','priority','department_id'), $id);
+            $this->loadModel("Department");
+
+            /**
+             * Get List of departments 
+             */ 
+            $departments = $this->Department->find('all');
+            $department_options = array();
+            foreach ($departments as $key => $value) {
+                $_id = $value['Department']["_id"];
+                $_name = $value['Department']["name"];
+                $departments_options[$_id] =$_name ;
+            }
+            $this->set("departments",$departments_options);
             
             //$this->data = $this->Post->find('first', array('conditions' => array('_id' => $id)));
         }
+
+
         
     }
 

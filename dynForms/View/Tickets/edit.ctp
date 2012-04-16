@@ -36,7 +36,10 @@
                 "options"=>Configure::read("scis.ticket.priority.options"),
             )
         );
-        echo $this->Form->input('department_id',array("type"=>"text"));
+        echo $this->Form->input('department_id',array(
+            "options"=>$departments,
+            "empty"=>"(Choose a department)",
+        ));
     ?>
     </fieldset>
     <?php echo $this->Form->submit("Save",array("class"=>"btn btn-primary btn-large")); ?>

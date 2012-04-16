@@ -397,4 +397,4 @@ Configure::write("scis.ticket.priority.options",array(
 /**
  * The default priority
  */
-Configure::write("scis.ticket.priority.default","executive");
+Configure::write("scis.ticket.priority.default","low");

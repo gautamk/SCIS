@@ -7,32 +7,18 @@ class DynamicFormResponse extends AppModel {
 	public $validate = array();
 	public $actsAs=array('Mongodb.Schemaless');
 	public function getDefaults(){
+		$brsr = get_browser(null,true);
+		$browser = array();
+		$browser["browser_name_pattern"] = $brsr["browser_name_pattern"];
+		$browser["parent"] = $brsr["parent"];
+		$browser["platform"] = $brsr["platform"];
 		$defaultValues=array(
 			"escalation"=>Configure::read("scis.ticket.escalation.default"),
 			"status"=>Configure::read("scis.ticket.status.default"),
 			"department_id"=>NULL,
 			"priority"=>Configure::read("scis.ticket.priority.default"),
-			"browser"=>get_browser(null,true),
+			"browser"=>$browser,
 		);
-		/**
-		 * 
-		 * Remove non-utf8 characters
-		 * this prevents non-utf8 MongoException
-		 * refer http://stackoverflow.com/a/1401716/492561
-		 */
-		$regex = <<<'END'
-/
-  (
-	(?: [\x00-\x7F]                 # single-byte sequences   0xxxxxxx
-	|   [\xC0-\xDF][\x80-\xBF]      # double-byte sequences   110xxxxx 10xxxxxx
-	|   [\xE0-\xEF][\x80-\xBF]{2}   # triple-byte sequences   1110xxxx 10xxxxxx * 2
-	|   [\xF0-\xF7][\x80-\xBF]{3}   # quadruple-byte sequence 11110xxx 10xxxxxx * 3 
-	)+                              # ...one or more times
-  )
-| .                                 # anything else
-/x
-END;
-		$defaultValues["browser"]["browser_name_regex"] = preg_replace($regex, '$1', $defaultValues["browser"]["browser_name_regex"]);
 		return $defaultValues;
 	}
 	

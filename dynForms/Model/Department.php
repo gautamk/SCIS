@@ -5,17 +5,17 @@ class Department extends AppModel {
     public $useTable = 'departments';
     public $primaryKey = '_id';
 
-    public isValidDepartment($id){
+    public function isValidDepartment($id=null){
         if(is_null($id) == true){
             return false;
         }
         /**
          *@var Mongodb Cursor 
          */
-        $results = $this->read(null,$id);
+        $results = $this->read(array("_id"),$id);
         if ($results==null){
             return false;
         }
-        return $results;
+        return true;
     }
 }
