@@ -10,7 +10,7 @@
 <div id="FormContainer" class="span10">
 <a class="btn btn-large btn-primary" href="<?php echo Router::url(array("controller"=>"tickets","action"=>"index")) ?>">
     Index
-</a>
+</a>  
     <?php 
         echo $this->Form->create("email",array(
                 "class"=>"hero-unit "
