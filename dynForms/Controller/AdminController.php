@@ -7,7 +7,8 @@ class AdminController extends AppController{
             $this->loadModel("User");
             try{
                 $this->User->create();
-                $this->User->save($this->request->data);
+                $result = $this->User->save($this->request->data);
+                $this->flash("User successfully added",array());
             }
             catch(MongoCursorException $e){
                 if ($e->getCode() == 11000){
@@ -15,5 +16,13 @@ class AdminController extends AppController{
                 }
             }
         }
+    }
+
+    public function list_users(){
+        $this->loadModel("User");
+        $result = $this->User->find("all",array(
+                          "fields"=>array("_id","email","escalation")
+        ));
+        $this->set("users",$result);
     }
 }

@@ -1,7 +1,18 @@
 <style>
     #NewUserFormContainer input{
-        font-size:30px;
+        font-size:20px;
         height:60px;
+    }
+    #NewUserFormContainer select{
+        font-size:20px;
+        height:60px;
+    }
+    #NewUserFormContainer label{
+        font-size:20px;
+        margin:5px;
+    }
+    #NewUserFormContainer div.input{
+        
     }
 </style>
 <div id="NewUserFormContainer" class="span10">
@@ -16,17 +27,22 @@
     ?>
     <legend>Create a new User account</legend>
     <?php
-    echo $this->Form->input("email",array("type"=>"email", "class"=>"span10",
-                            "placeholder"=>"Enter the new users's email id ",
-    ));
+        echo $this->Form->input("email",array("type"=>"email", "class"=>"span10",
+                                "placeholder"=>"Enter the new users's email id ",
+        ));
 
-    echo $this->Form->input("password",array("type"=>"password","class"=>"span10",
-                            "placeholder"=>"Enter the new users's password ",
-    ));
+        echo $this->Form->input("password",array("type"=>"password","class"=>"span10",
+                                "placeholder"=>"Enter the new users's password ",
+        ));
 
-    echo $this->Form->submit("Add User",array("class"=>"btn btn-primary span10"
-    ));
+        echo $this->Form->input("escalation",array(
+                                "options"=>Configure::read("scis.ticket.escalation.options"),
+                                "class"=>"span10",
+        ));
 
-    echo $this->Form->end();
-     ?>
+        echo $this->Form->submit("Add User",array("class"=>"btn btn-primary span10"
+        ));
+
+        echo $this->Form->end();
+    ?>
 <div>
