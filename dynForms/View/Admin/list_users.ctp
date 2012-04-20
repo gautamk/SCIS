@@ -1,3 +1,6 @@
+<?php $this->extend('/Admin/index');
+    $this->start('admin_content');
+ ?>
 <table class="table table-bordered table-striped ">
     <caption>List of Users</caption>
     <thead>
@@ -20,3 +23,4 @@
 <?php endforeach; ?>
 </tbody>
 </table>
+<?php $this->end(); ?>

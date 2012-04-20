@@ -1,3 +1,6 @@
+<?php $this->extend('/Admin/index'); 
+    $this->start('admin_content');
+?>
 <style>
     #NewUserFormContainer input{
         font-size:20px;
@@ -46,3 +49,4 @@
         echo $this->Form->end();
     ?>
 <div>
+<?php $this->end(); ?>

@@ -146,6 +146,10 @@
 									<a href="<?php echo Router::url(array("controller"=>"charts")) ?>" 
 									title="Charts">Charts</a>
 								</li>
+								<li>
+									<a href="<?php echo Router::url(array("controller"=>"admin")) ?>" 
+									title="Admin">Admin</a>
+								</li>
 								
 							<?php endif; ?>
 							<li><a>Server Time : <?php echo Date('h:i:s a'); ?></a></li>

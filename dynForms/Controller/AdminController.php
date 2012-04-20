@@ -2,6 +2,9 @@
 class AdminController extends AppController{
     public $helpers = array('Form', 'Html');
 
+    public function index(){
+
+    }
     public function new_user(){
         if($this->request->is("Post")){
             $this->loadModel("User");
@@ -24,5 +27,31 @@ class AdminController extends AppController{
                           "fields"=>array("_id","email","escalation")
         ));
         $this->set("users",$result);
+    }
+
+    public function new_department(){
+        if($this->request->is("Post")){
+            $this->loadModel("Department");
+            try{
+                $this->Department->create();
+                $result = $this->Department->save($this->request->data);
+                if($result){
+                    $this->flash("Department successfully added",array());
+                }
+            }
+            catch(MongoCursorException $e){
+                if ($e->getCode() == 11000){
+                    $this->set("Department_already_exists",true);
+                }
+            }
+        }
+    }
+
+    public function list_departments(){
+        $this->loadModel("Department");
+        $result = $this->Department->find("all",array(
+            "fields"=>array("_id","name","description")
+        ));
+        $this->set("departments",$result);
     }
 }
