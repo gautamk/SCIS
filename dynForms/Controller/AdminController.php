@@ -2,6 +2,17 @@
 class AdminController extends AppController{
     public $helpers = array('Form', 'Html');
 
+    public function beforeFilter(){
+            if($this->Auth->loggedIn()){
+                $email = $this->Auth->user("email");
+            $result = $this->Acl->check("Admin/$email","Administration");
+            if($result != true){
+                throw new ForbiddenException("Access Denied");
+                
+            }
+        }
+
+    }
     public function index(){
 
     }

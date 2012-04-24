@@ -33,6 +33,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
     public $components = array(
+        'Acl',
     	'DebugKit.Toolbar',
         'RequestHandler',
     	'Security',
