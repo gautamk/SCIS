@@ -72,6 +72,13 @@ class TicketsController extends AppController {
         if($tickets == false ){
             throw new NotFoundException("Ticket not found");
         }
+        $this->loadModel("Department");
+        $departmentID= $tickets["DynamicFormResponse"]["department_id"];
+        if(!is_null($departmentID) && $departmentID != null && $departmentID != ""){
+            $department = $this->Department->read(NULL,$departmentID);
+            $tickets["DynamicFormResponse"]["Department"] = $department["Department"]["name"];
+        }
+        
         $tickets["DynamicFormResponse"]["modified"] = date('h:i:s d-M-Y ', $tickets["DynamicFormResponse"]["modified"]->sec);
         $tickets["DynamicFormResponse"]["created"] = date('h:i:s d-M-Y ', $tickets["DynamicFormResponse"]["created"]->sec);
         $this->set(compact('tickets'));
