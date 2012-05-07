@@ -1,7 +1,8 @@
 #window.location.pathname.charAt(window.location.pathname.length - 1) =="/" ? window.location.pathname:window.location.pathname+"/"
 window.REQUEST_LOCATION = if window.location.pathname.charAt(window.location.pathname.length-1) is "/" then window.location.pathname else window.location.pathname+"/"
 window._chart =null
-window._new_chart = (title,series)->
+
+window._new_chart =(title,series)->
     chart = new Highcharts.Chart {
         chart:{
             renderTo:"ChartContainer"

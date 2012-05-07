@@ -3,15 +3,17 @@
 
   jQuery(function() {
     $("#emailEmailForm").submit(function(event) {
-      var ret;
-      ret = false;
       if ($(event.target).find("#emailSubject").val() === "") {
-        ret = confirm("Are you sure ?\nSend without a Subject ? ");
+        if (confirm("Are you sure ?\nSend without a Subject ? ") !== true) {
+          return false;
+        }
       }
       if ($(event.target).find("#emailMessage").val() === "") {
-        ret = confirm("Are you sure ?\nSend without a Message body ? ");
+        if (confirm("Are you sure ?\nSend without a Message body ? ") !== true) {
+          return false;
+        }
       }
-      return ret;
+      return true;
     });
     return this;
   });
